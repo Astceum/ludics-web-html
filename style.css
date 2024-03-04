@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+
+@font-face {
+    font-family: nunitosans;
+    src: url("./font/NunitoSans-Italic.ttf");
+    
+}
+
+
+body, html{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 3px;
+    height: 3px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s;
+}
+
+.inner-cursor.grow {
+    width: 25px;
+    height: 25px;
+    transition: width 0.3s, height 0.3s;
+}
+
+.outer-cursor {
+    position: fixed;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #686868;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s;
+    
+}
+
+.outer-cursor.grow {
+    width: 90px;
+    height: 90px;
+    transition: width 0.3s, height 0.3s;
+}
+
+
+.container-home {
+    width: 100%;
+    height: 97%;
+    position: relative;
+}
+
+.logo-ludics {
+    position: absolute;
+    height: 60px;
+    margin: 60px;
+}
+
+.menu-home {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: nunitosans;
+    display: inline-block; /* Asegura que el span ocupe solo el ancho de su contenido */
+    transform: scaleX(1.2); /* Escala horizontalmente el contenido */
+    transform-origin: left;
+    font-size: 6vw;
+    line-height: 10.7vw;
+}
+
+.menu-home a {
+    text-decoration: none;
+    color: #bfff0a;
+}
+
+.menu {
+    margin: 0;
+    height: 100%;
+    margin-left: 50px;
+    font-weight: 1000;
+    transition: font-weight 0.3s;
+    
+}
+
+.menu:hover {
+    font-weight: 100;
+}
