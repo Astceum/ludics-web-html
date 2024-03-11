@@ -3,25 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <div class="container-home">
-        <img class="logo-ludics" src="./svg/logo-ludics.svg" alt="">
+    <div class="container">
+        <!-- HOME -->
+        <aside id="left">
 
-        <div class="menu-home">
-            
-                <a href="#"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#"><h1 class="menu">LUDICS</h1></a>
-                <a href="#"><h1 class="menu">Y MÁS</h1></a>
-               
+            <div class="container-home">
+                <img class="logo-ludics" src="./svg/logo-ludics.svg" alt="">
+        
+                <div class="menu-home">
+                    
+                        <a href="#t_servicios" onclick="toggleService()"><h1 id="miElemento1" class="menu">SERVICIOS</h1></a>
+                        <a href="#t_ludics" onclick="toggleLudics()"><h1 id="miElemento2" class="menu">LUDICS</h1></a>
+                        <a href="#" onclick="toggleAndMore()"><h1 id="miElemento3" class="menu">Y MAS</h1></a>
+                       
+                </div>
+            </div>
+        </aside>
+
+        <!-- SERVICIOS -->
+        <div id="t_servicios">
+        <aside id="servicios">
+
+            <div class="menu-servicios">
+
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+
+            </div>
+        </aside>
         </div>
+
+        <!-- LUDICS -->
+        <div id="t_ludics">
+        <aside id="ludics">
+
+
+            <div class="menu-ludics">
+
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                
+                <div class="slider-team">
+                    <div class="swiper">
+           
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/Carlos_Zamorano.jpg" alt="">
+                                <!-- <div class="title">
+                                    <span>Nombres</span>
+                                </div> -->                
+                            </div>                                    
+                            <div class="swiper-slide">
+                                <img src="img/Camila_Salvo.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Hector_Briceño.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Carlos_Zamorano.jpg" alt="">             
+                            </div>                                    
+                            <div class="swiper-slide">
+                                <img src="img/Camila_Salvo.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Hector_Briceño.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div>
+                
+                    </div>
+                </div>           
+            </div>
+            
+        </aside>
+        </div>
+
     </div>
+
+
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
