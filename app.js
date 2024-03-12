@@ -14,6 +14,9 @@ let menuService = document.getElementById("miElemento1")
 let menuService2 = document.getElementById("miElemento2")
 let menuService3 = document.getElementById("miElemento3")
 
+let servicioActivo = false;
+let ludicsActivo = false;
+
 
 document.addEventListener('mousemove', moveCursor);
 
@@ -48,9 +51,11 @@ link.forEach((link) => {
 })
 
 function toggleService(){
+  servicioActivo = !servicioActivo;
     service.classList.toggle('toggleService');
     serviceLeft.classList.toggle('toggleService');
     servicieMenu.classList.toggle('toggleService');
+    menuService.classList.toggle('toggleService');
     
 
     if (menuService.classList.contains("no-hover")) {
@@ -66,12 +71,20 @@ function toggleService(){
         menuService2.classList.add("no-hover");
         menuService3.classList.add("no-hover");
       }
+
+    if (servicioActivo) {
+      if (ludicsActivo) {
+          toggleLudics();
+      }
+    }
 }
 
 function toggleLudics(){
+  ludicsActivo = !ludicsActivo;
     ludics.classList.toggle('toggleLudics');
     ludicsLeft.classList.toggle('toggleLudics');
     ludicsMenu.classList.toggle('toggleLudics');
+    menuService2.classList.toggle('toggleLudics');
     
 
     if (menuService.classList.contains("no-hover-ludics")) {
@@ -87,6 +100,12 @@ function toggleLudics(){
         menuService2.classList.add("no-hover-ludics");
         menuService3.classList.add("no-hover-ludics");
       }
+
+    if (ludicsActivo) {
+      if (servicioActivo) {
+         toggleService();
+      }
+    }
 }
 
 

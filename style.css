@@ -115,12 +115,6 @@ body {
     transform: scaleX(0.5);
 }
 
-/* .menu-home.toggleLudics {
-    font-size: 4vw;
-    line-height: 5vw;
-    transform: scaleX(0.5);
-} */
-
 
 .menu-home a {
     text-decoration: none;
@@ -150,7 +144,7 @@ body {
     color: #bfff0a;
 }
 
-#miElemento1 {
+#miElemento1.toggleService {
     color: #bfff0a;
 }
 
@@ -166,7 +160,7 @@ aside {
 
 /* SERVICIOS */
 
-#t_servicios:target #servicios {
+#t_servicios:target .toggleService { 
     transform: translateX(-100%);
 }
 
@@ -230,7 +224,7 @@ aside#servicios::-webkit-scrollbar {
    
 } */
 
-#t_ludics:target #ludics {
+#t_ludics:target .toggleLudics {
     transform: translateX(-100%);
 }
 
@@ -302,9 +296,9 @@ aside#ludics::-webkit-scrollbar {
     color: #bfff0a;
 }
 
-/* #miElemento2 {
+#miElemento2.toggleLudics {
     color: #bfff0a;
-} */
+}
 
 
 
