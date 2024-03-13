@@ -70,10 +70,16 @@ body {
 #left {
     left: 0;
     width: 100%;
-    transform: width 0.4s;
+    
     z-index: 10;
-    transition: width 0.4s;
+    transition: width 1s;
 }
+
+#left.toggleService, #left.toggleLudics {
+    width: 27%;
+}
+
+
 
 
 .container-home {
@@ -82,11 +88,6 @@ body {
     position: absolute;
    
 }
-
-#left.toggleService, #left.toggleLudics {
-    width: 30%;
-}
-
 
 
 .logo-ludics {
@@ -106,7 +107,7 @@ body {
     font-size: 8vw;
     line-height: 10vw;
     font-weight: 100;
-    transition: font-size 0.5s, line-height 0.5s, transform 0.5s;
+    transition: font-size 1s, line-height 1s, transform 1s;
 }
 
 .menu-home.toggleService, .menu-home.toggleLudics {
@@ -125,7 +126,7 @@ body {
     margin: 0;
     margin-left: 80px;
     font-weight: 1000;
-    transition: font-weight 0.3s, margin-left 0.3s;
+    transition: font-weight 0.4s, margin-left 0.3s;
     
 }
 
@@ -160,7 +161,7 @@ aside {
 
 /* SERVICIOS */
 
-#t_servicios:target .toggleService { 
+#t_servicios .toggleService { /* se elimino el :target */
     transform: translateX(-100%);
 }
 
@@ -219,12 +220,9 @@ aside#servicios::-webkit-scrollbar {
 
 /* LUDICS */
 
-/* #left.toggleLudics {
-    width: 20%;
-   
-} */
 
-#t_ludics:target .toggleLudics {
+
+#t_ludics .toggleLudics {  /* se elimino el :target */
     transform: translateX(-100%);
 }
 
@@ -384,4 +382,36 @@ aside#ludics::-webkit-scrollbar {
     width: 32px;
     background-color: rgba(25, 43, 206, 1);
     border-radius: 14px;
+}
+
+
+/* SECCION SERVICIOS VIDEOS */
+
+/* BTN-1 */
+/* .active-btn-1 {
+    background-color: aqua;
+} */
+.menu-servicios.menu.active-servicios {
+    color: aquamarine;
+    font-weight: 100;
+    transition: font-weight 0.3s;
+    
+}
+
+/* .menu-servicios.active-btn-1 {
+    font-size: 8vw;
+    line-height: 5vw;
+    transform: scaleX(0.5);
+} */
+
+.active-btn-2 {
+    background-color: rgb(50, 94, 0);
+}
+
+.active-btn-3 {
+    background-color: rgb(255, 0, 0);
+}
+
+.active-btn-4 {
+    background-color: rgb(251, 255, 0);
 }

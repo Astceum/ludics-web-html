@@ -109,12 +109,6 @@ function toggleLudics(){
 }
 
 
-
-
-
-
-
-
 /* SLIDER LUDICS */
 let swiper = new Swiper(".swiper", {
   effect: "coverflow",
@@ -142,3 +136,27 @@ let swiper = new Swiper(".swiper", {
   }
   
 });
+
+
+
+function activarFuncion(servicio) {
+  let enlace = document.getElementById(servicio);
+  let enlaces = document.querySelectorAll('div[id^="servicios-1"], h1[id^="btn-1"], h1[id^="btn-2"], h1[id^="btn-3"], h1[id^="btn-4"]');
+  
+  // Desactivar todas las funciones si ya están activadas
+  var clase = "active-" + servicio;
+  if (enlace.classList.contains(clase)) {
+      enlace.classList.remove(clase);
+      return; // Salir de la función si ya está desactivada
+  }
+
+  // Desactivar todas las funciones
+  for (var i = 0; i < enlaces.length; i++) {
+      var enlaceActual = enlaces[i];
+      var claseActual = "active-" + enlaceActual.id;
+      enlaceActual.classList.remove(claseActual);
+  }
+  
+  // Activar solo la función correspondiente al enlace clickeado
+  enlace.classList.toggle(clase);
+}
