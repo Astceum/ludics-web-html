@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./yMas.css">
     <title>Document</title>
 </head>
 <body>
     
+    <div class="banner">
+        <img id="logoLudics" class="logo-ludics" src="./svg/logo-ludics.svg" alt="">
+        <div class="social-media">
+            <a href="https://www.instagram.com/ludicschile/" target="_blank"><img class="logo-ig" src="./svg/Instagram.svg" alt=""></a>
+            <a href="https://www.tiktok.com/@ludicschile" target="_blank"><img class="logo-tt" src="./svg/tik-tok.svg" alt=""></a>
+            <a href="https://www.youtube.com/@ludics6688" target="_blank"><img class="logo-yt" src="./svg/youtube.svg" alt=""></a>
+        </div>
+    </div>
+
     <div class="container">
         <!-- HOME -->
         <aside id="left">
 
             <div class="container-home">
-                <img class="logo-ludics" src="./svg/logo-ludics.svg" alt="">
+                
         
                 <div class="menu-home">
                     
-                        <a href="#t_servicios" onclick="toggleService()"><h1 id="miElemento1" class="menu">SERVICIOS</h1></a>
-                        <a href="#t_ludics" onclick="toggleLudics()"><h1 id="miElemento2" class="menu">LUDICS</h1></a>
-                        <a href="#t_and_more" onclick="toggleAndMore()"><h1 id="miElemento3" class="menu">Y MAS</h1></a>
+                        <a href="#" onclick="toggleService()"><h1 id="miElemento1" class="menu btn-menu">SERVICIOS</h1></a>
+                        <a href="#" onclick="toggleLudics()"><h1 id="miElemento2" class="menu btn-menu">LUDICS</h1></a>
+                        <a href="#" onclick="toggleAndMore()"><h1 id="miElemento3" class="menu btn-menu">Y MÁS</h1></a>
                        
                 </div>
             </div>
@@ -28,111 +38,286 @@
 
         <!-- SERVICIOS -->
         <div id="t_servicios">
-        <aside id="servicios">
+            <aside id="servicios">
 
-            <div id="servicios-1" class="menu-servicios">
+                <div class="menu-servicios">
 
-                <a href="#" onclick="activarFuncion('servicios-1')"><h1 id="btn-1" class="menu">VIDEO 1</h1></a>
-                <a href="#" onclick="activarFuncion('')"><h1 id="btn-2" class="menu">-VIDEO_2</h1></a>
-                <a href="#" onclick="activarFuncion('btn-3')"><h1 id="btn-3" class="menu">VIDEO-3</h1></a>
-                <a href="#" onclick="activarFuncion('btn-4')"><h1 id="btn-4" class="menu">VIDEO  4</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                    <a href="#" onclick="btnActivate(1)"><h1 id="idBtn-1" class="menu btn-1">EVENTOS</h1></a>
+                    <a href="#" onclick="btnActivate(2)"><h1 id="idBtn-2" class="menu btn-1">TEAM</br>BUILDING</h1></a>
+                    <a href="#" onclick="btnActivate(3)"><h1 id="idBtn-3" class="menu btn-1">PRODUCCIÓN</br>AUDIOVISUAL</h1></a>
+                    <a href="#" onclick="btnActivate(4)"><h1 id="idBtn-4" class="menu btn-1">DISEÑO Y</br>MARKETING</br>DIGITAL</h1></a>
+                    <a href="#" onclick="btnActivate(5)"><h1 id="idBtn-5" class="menu btn-1">ESTUDIO Y TV</h1></a>
+                    
+                </div>
+            </aside>
+            <div id="eventos">
+                <aside id="t_eventos">
+                    <div id="btn-eventos">
 
+                        <div class="video">                            
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <div id="description-container">
+                                <div class="text-description">
+                                    <h1>DESCRIPCIÓN</h1>
+                                    <p>Contamos con un equipo de diseñadores creativos capacitados, para realizar y producir 
+                                        proyectos gráficos adaptados a los nuevos tiempos, usando formatos digitales y offset, 
+                                        con el fin de mejorar la experiencia de marca. Buscamos impulsar tus productos desde la 
+                                        innovación, e integrarlos constantemente a las nuevas tendencias, diseñando en conjunto 
+                                        tu idea hasta la implementación. Produciendo, Branding, Gigantografía, Packaging, 
+                                        Identidad de Marca y Marketing Digital.</p>
+                                </div>
+                            </div>
+                            <a type="button" class="yt-modal-btn event1">
+                                <img id="image1" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
+                                <video id="video1" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video">
+                            <h1 class="title-video">TITULO 2</br>VIDEO</h1>
+                            <a type="button" class="yt-modal-btn event2">
+                                <img id="image2" src="./img/eventos/FOTO_EVENT_2.webp" alt="" class="img-front">
+                                <video id="video2" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video">
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <a type="button" class="yt-modal-btn event3">
+                                <img id="image3" src="./img/eventos/FOTO_EVENT_1.webp" alt="" class="img-front">
+                                <video id="video3" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+
+                    </div>
+                </aside>
             </div>
-        </aside>
-        <aside id="btn-service-1">
-            <div class="video"></div>
-            <div class="video"></div>
-            <div class="video"></div>
-        </aside>
+            <div id="building">
+                <aside id="t_building">
+                    <div id="btn-building">
+
+                        <div class="video">                            
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <div id="description-container">
+                                <div class="text-description">
+                                    <h1>DESCRIPCIÓN</h1>
+                                    <p>Nuestra área especializada en entretención nos ha proporcionado un producto único 
+                                        a la medida de nuestros clientes, este nuevo servicio nos ha llevado cada día a 
+                                        aumentar la expertiz en la elaboración de juegos con los más altos estándares de 
+                                        seguridad para una gran variedad de clientes en todo Chile, tanto para empresas 
+                                        públicas, privadas y canales de televisión siendo protagonistas de realities como 
+                                        Mundos Opuestos 1 y 2, Generaciones Cruzadas (Canal 13) y programas estelares como 
+                                        Vértigo (Canal 13), La Vega (TVN), Minuto para Ganar (CHV) entre otros. Nuestro objetivo 
+                                        es crear experiencias originales que sean entretenidas, que desafíen, provoquen e inspiren.</p>
+                                </div>
+                            </div>
+                            <a type="button" class="yt-modal-btn event1">
+                                <img id="image4" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
+                                <video id="video4" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video">
+                            <h1 class="title-video">TITULO 2</br>VIDEO</h1>
+                            <a type="button" class="yt-modal-btn event2">
+                                <img id="image5" src="./img/eventos/FOTO_EVENT_2.webp" alt="" class="img-front">
+                                <video id="video5" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video">
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <a type="button" class="yt-modal-btn event3">
+                                <img id="image6" src="./img/eventos/FOTO_EVENT_1.webp" alt="" class="img-front">
+                                <video id="video6" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+
+                    </div>
+                </aside>
+            </div>
+            <div id="audiovisual">
+                <aside id="t_audiovisual">
+                    <div id="btn-audiovisual">
+
+                        <div class="video">                            
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <div id="description-container">
+                                <div class="text-description">
+                                    <h1>DESCRIPCIÓN</h1>
+                                    <p>Producimos proyectos audiovisuales con los estándares más actuales, adaptándolos a 
+                                        cualquier plataforma digital. Videos corporativos, Contenidos de marcas, Clips 
+                                        musicales, material para Social media, Motion graphics y Animación corporativa. 
+                                        Sabemos que nuestra principal tarea es materializar la visión del cliente en cada proyecto.</p>
+                                </div>
+                            </div>
+                            <a type="button" class="yt-modal-btn event1">
+                                <img id="image7" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
+                                <video id="video7" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video"></div>
+                        <div class="video"></div>
+
+                    </div>
+                </aside>
+            </div>
+            <div id="marketing">
+                <aside id="t_marketing">
+                    <div id="btn-marketing">
+
+                        <div class="video">                            
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <div id="description-container">
+                                <div class="text-description">
+                                    <h1>DESCRIPCIÓN</h1>
+                                    <p>Contamos con un equipo de diseñadores creativos capacitados, para realizar y producir 
+                                        proyectos gráficos adaptados a los nuevos tiempos, usando formatos digitales y offset, 
+                                        con el fin de mejorar la experiencia de marca. Buscamos impulsar tus productos desde 
+                                        la innovación, e integrarlos constantemente a las nuevas tendencias, diseñando en 
+                                        conjunto tu idea hasta la implementación.
+                                        Produciendo, Branding, Gigantografía, Packaging, Identidad de Marca y Marketing Digital.</p>
+                                </div>
+                            </div>
+                            <a type="button" class="yt-modal-btn event1">
+                                <img id="image8" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
+                                <video id="video8" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video"></div>
+                        <div class="video"></div>
+
+                    </div>
+                </aside>
+            </div>
+            <div id="estudio">
+                <aside id="t_estudio">
+                    <div id="btn-estudio">
+
+                        <div class="video">                            
+                            <h1 class="title-video">TITULO</br>VIDEO</h1>
+                            <div id="description-container">
+                                <div class="text-description">
+                                    <h1>DESCRIPCIÓN</h1>
+                                    <p>Nuestro desarrollo creativo y expertiz en juegos, nos ha llevado a ser parte de 
+                                        diferentes programas de televisión, alguno de ellos son: Mundos Opuestos 1 y 2, 
+                                        Pareja Perfecta, Generaciones Cruzadas, Vertigo en la Calle, La Vega, Minuto Para Ganar,
+                                        entre otros.</p>
+                                </div>
+                            </div>
+                            <a type="button" class="yt-modal-btn event1">
+                                <img id="image9" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
+                                <video id="video9" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
+                            </a>
+                        </div>
+                        <div class="video"></div>
+                        <div class="video"></div>
+
+                    </div>
+                </aside>
+            </div>
         </div>
 
         <!-- LUDICS -->
         <div id="t_ludics">
-        <aside id="ludics">
+            <aside id="ludics">
 
 
-            <div class="menu-ludics">
+                <div class="menu-ludics">
 
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                
-                <div class="slider-team">
-                    <div class="swiper">
-           
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/Carlos_Zamorano.jpg" alt="">
-                                <!-- <div class="title">
-                                    <span>Nombres</span>
-                                </div> -->                
-                            </div>                                    
-                            <div class="swiper-slide">
-                                <img src="img/Camila_Salvo.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/Hector_Briceño.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/Carlos_Zamorano.jpg" alt="">             
-                            </div>                                    
-                            <div class="swiper-slide">
-                                <img src="img/Camila_Salvo.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/Hector_Briceño.jpg" alt="">
-                            </div>
-                            
-                        </div>
-                        <div class="swiper-pagination"></div>
-                
-                    </div>
-                </div>           
-            </div>
+                    <a href="#" class="btn"><h1 class="menu">SERVdwaICIOS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
+                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
+                    
+                    
+                    <div class="slider-team">
+                        <div class="swiper1">
             
-        </aside>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/Carlos_Zamorano.jpg" alt="">
+                                    <!-- <div class="title">
+                                        <span>Nombres</span>
+                                    </div> -->                
+                                </div>                                    
+                                <div class="swiper-slide">
+                                    <img src="img/Camila_Salvo.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/Hector_Briceño.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/Carlos_Zamorano.jpg" alt="">             
+                                </div>                                    
+                                <div class="swiper-slide">
+                                    <img src="img/Camila_Salvo.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/Hector_Briceño.jpg" alt="">
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-pagination"></div>
+                    
+                        </div>
+                    </div>           
+                </div>
+                
+            </aside>
         </div>
+
+        <!-- Y MAS -->
+        <div id="t_and_more">
+            <aside id="and-more">                    
+                    
+                    <div class="slider-portafolio">
+                        <!-- Swiper -->
+                        <div class="swiper2 mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959586/ludics/laser-fx_zrlkna.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>                            
+                        </div>
+
+                        <div dir="rtl" class="swiper3 mySwiper3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>    
+                        </div>
+                             
+                    </div>
+                
+            </aside>
+        </div>
+
+        <div class="modal-bg"></div>
 
     </div>
 
 
-    <div class="inner-cursor"></div>
-    <div class="outer-cursor"></div>
+    <div class="inner-cursor inner-cursor-play"></div>
+    <div class="innerPlay"></div>
+    <div class="outer-cursor outer-cursor-play"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="service.js"></script>
 </body>
 </html>

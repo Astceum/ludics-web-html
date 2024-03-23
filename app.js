@@ -1,14 +1,23 @@
 let innerCursor = document.querySelector(".inner-cursor");
 let outerCursor = document.querySelector(".outer-cursor");
+let innerCursorPlay = document.querySelector(".inner-cursor-play");
+let outerCursorPlay = document.querySelector(".outer-cursor-play");
+let innerPlay = document.querySelector(".innerPlay");
 
-let service = document.querySelector("#servicios");
-let serviceLeft = document.querySelector(".menu-home")
-let servicieMenu = document.querySelector("#left");
+let menuHome = document.querySelectorAll(".btn-menu");
 
-let ludics = document.querySelector("#ludics");
-let ludicsLeft = document.querySelector(".menu-home ")
-let ludicsMenu = document.querySelector("#left");
+let idService = document.querySelector("#servicios");
+let idLudics = document.querySelector("#ludics");
+let idAndMore = document.querySelector("#and-more");
 
+let idEvents = document.querySelector("#t_eventos");
+let idBuilding = document.querySelector("#t_building");
+let idAudiovisual = document.querySelector("#t_audiovisual");
+let idMarketing = document.querySelector("#t_marketing");
+let idEstudio = document.querySelector("#t_estudio");
+
+let classMenuHome = document.querySelector(".menu-home")
+let idLeft = document.querySelector("#left");
 
 let menuService = document.getElementById("miElemento1")
 let menuService2 = document.getElementById("miElemento2")
@@ -16,6 +25,7 @@ let menuService3 = document.getElementById("miElemento3")
 
 let servicioActivo = false;
 let ludicsActivo = false;
+let andMoreActivo = false;
 
 
 document.addEventListener('mousemove', moveCursor);
@@ -26,11 +36,18 @@ function moveCursor(e) {
 
     innerCursor.style.left = `${x}px`;
     innerCursor.style.top = `${y}px`;
+    innerCursorPlay.style.left = `${x}px`;
+    innerCursorPlay.style.top = `${y}px`;
     outerCursor.style.left = `${x}px`;
     outerCursor.style.top = `${y}px`;
+    outerCursorPlay.style.left = `${x}px`;
+    outerCursorPlay.style.top = `${y}px`;
+    innerPlay.style.left = `${x}px`;
+    innerPlay.style.top = `${y}px`;
 }
 
 let link = Array.from(document.querySelectorAll('a'));
+let play = Array.from(document.querySelectorAll('.video'));
 
 /* link.forEach((link) => {
     link.addEventListener('mouseover', ()=>{
@@ -50,67 +67,120 @@ link.forEach((link) => {
     })
 })
 
+
+play.forEach((play) => {
+  play.addEventListener('mouseover', ()=>{
+    innerCursorPlay.classList.add('play');
+    innerPlay.classList.add('play');
+    innerPlay.innerHTML = `    
+      <h1>PLAY</h1>
+    `;
+  })
+  play.addEventListener('mouseleave', ()=>{
+    innerCursorPlay.classList.remove('play');
+    innerPlay.innerHTML = `
+    `;
+  })
+})
+
+play.forEach((play) => {
+  play.addEventListener('mouseover', ()=>{
+    outerCursorPlay.classList.add('play');
+    
+  })
+  play.addEventListener('mouseleave', ()=>{
+    outerCursorPlay.classList.remove('play');
+    
+  })
+})
+
+
+/* play.forEach((play) => {
+  play.addEventListener('mouseover', ()=>{
+    innerCursorPlay.classList.add('play');
+  })
+  play.addEventListener('mouseleave', ()=>{
+    innerCursorPlay.classList.remove('play');
+  })
+})
+
+play.forEach((play) => {
+  play.addEventListener('mouseover', ()=>{
+    outerCursorPlay.classList.add('play');
+  })
+  play.addEventListener('mouseleave', ()=>{
+    outerCursorPlay.classList.remove('play');
+  })
+}) */
+
+
+document.getElementById('logoLudics').addEventListener('click', function() {
+  // Recargar la página
+  location.reload();
+});
+
+
 function toggleService(){
   servicioActivo = !servicioActivo;
-    service.classList.toggle('toggleService');
-    serviceLeft.classList.toggle('toggleService');
-    servicieMenu.classList.toggle('toggleService');
+    idService.classList.toggle('toggleService');
+    idLeft.classList.toggle('toggleService');
+    classMenuHome.classList.toggle('toggleService');
     menuService.classList.toggle('toggleService');
     
-
-    if (menuService.classList.contains("no-hover")) {
-        menuService.classList.remove("no-hover");
-      }
-    if (menuService2.classList.contains("no-hover")) {
-        menuService2.classList.remove("no-hover");
-      }
-    if (menuService3.classList.contains("no-hover")) {
-        menuService3.classList.remove("no-hover");
-      } else {
-        menuService.classList.add("no-hover");
-        menuService2.classList.add("no-hover");
-        menuService3.classList.add("no-hover");
-      }
+      menuHome.forEach(function(btn) {
+        if (btn.classList.contains("no-hover")) {
+          btn.classList.remove("no-hover");
+        }else {
+          btn.classList.add("no-hover");
+        }})
 
     if (servicioActivo) {
       if (ludicsActivo) {
           toggleLudics();
       }
+      if (andMoreActivo) {
+        toggleAndMore();
+    }
     }
 }
 
 function toggleLudics(){
   ludicsActivo = !ludicsActivo;
-    ludics.classList.toggle('toggleLudics');
-    ludicsLeft.classList.toggle('toggleLudics');
-    ludicsMenu.classList.toggle('toggleLudics');
+    idLudics.classList.toggle('toggleLudics');
+    idLeft.classList.toggle('toggleLudics');
+    classMenuHome.classList.toggle('toggleLudics');
     menuService2.classList.toggle('toggleLudics');
     
-
-    if (menuService.classList.contains("no-hover-ludics")) {
-        menuService.classList.remove("no-hover-ludics");
-      }
-    if (menuService2.classList.contains("no-hover-ludics")) {
-        menuService2.classList.remove("no-hover-ludics");
-      }
-    if (menuService3.classList.contains("no-hover-ludics")) {
-        menuService3.classList.remove("no-hover-ludics");
-      } else {
-        menuService.classList.add("no-hover-ludics");
-        menuService2.classList.add("no-hover-ludics");
-        menuService3.classList.add("no-hover-ludics");
-      }
-
-    if (ludicsActivo) {
+    /* if (ludicsActivo) {
       if (servicioActivo) {
          toggleService();
       }
+      if (andMoreActivo) {
+        toggleAndMore();
     }
+    } */
+}
+
+function toggleAndMore(){
+  andMoreActivo = !andMoreActivo;
+    idAndMore.classList.toggle('toggleAndMore');
+    idLeft.classList.toggle('toggleAndMore');
+    classMenuHome.classList.toggle('toggleAndMore');
+    menuService3.classList.toggle('toggleAndMore');
+    
+    /* if (andMoreActivo) {
+      if (servicioActivo) {
+         toggleService();
+      }
+      if (ludicsActivo) {
+        toggleLudics();
+    }
+    } */
 }
 
 
 /* SLIDER LUDICS */
-let swiper = new Swiper(".swiper", {
+let swiper1 = new Swiper(".swiper1", {
   effect: "coverflow",
   grabCursor: true,
   loop: true,
@@ -128,7 +198,7 @@ let swiper = new Swiper(".swiper", {
   },
   on: {
       click(event) {
-          swiper.slideTo(this.clickedIndex)
+          swiper1.slideTo(this.clickedIndex)
       }
   },
   pagination: {
@@ -139,24 +209,179 @@ let swiper = new Swiper(".swiper", {
 
 
 
-function activarFuncion(servicio) {
-  let enlace = document.getElementById(servicio);
-  let enlaces = document.querySelectorAll('div[id^="servicios-1"], h1[id^="btn-1"], h1[id^="btn-2"], h1[id^="btn-3"], h1[id^="btn-4"]');
+
+// BOTONES MENU-SEVICIOS
+
+let classMenuService = document.querySelector(".menu-servicios");
+let btnServiceMenu = document.querySelectorAll('.btn-1');
+
+// Función para activar el botón correspondiente
+function btnActivate(numBtn) {
+
+  let btnNumber = [1, 2, 3, 4, 5]
+  btnNumber.map(element => {
+      if (numBtn == element) {
+        let idBtn = document.querySelector(`#idBtn-${element}`)
+        idLeft.classList.toggle(`activate-btn-${element}`);
+        classMenuHome.classList.toggle(`activate-btn-${element}`);
+        idService.classList.toggle(`activate-btn-${element}`);
+        classMenuService.classList.toggle(`activate-btn-${element}`);
+        idEvents.classList.toggle(`activate-btn-${element}`);
+        idBuilding.classList.toggle(`activate-btn-${element}`);
+        idAudiovisual.classList.toggle(`activate-btn-${element}`);
+        idMarketing.classList.toggle(`activate-btn-${element}`);
+        idEstudio.classList.toggle(`activate-btn-${element}`);
+        idBtn.classList.toggle(`activate-btn-${element}`);
+        
+        btnServiceMenu.forEach(function(btn) {
+          if (btn.classList.contains(`no-hover-btn-${element}`)) {
+            btn.classList.remove(`no-hover-btn-${element}`);
+          } else {
+            btn.classList.add(`no-hover-btn-${element}`);
+          }
+        });
+
+      } else {
+        let idBtn = document.querySelector(`#idBtn-${element}`);
+        
+        idLeft.classList.remove(`activate-btn-${element}`);
+        classMenuHome.classList.remove(`activate-btn-${element}`);
+        idService.classList.remove(`activate-btn-${element}`);
+        classMenuService.classList.remove(`activate-btn-${element}`);
+        idEvents.classList.remove(`activate-btn-${element}`);
+        idBuilding.classList.remove(`activate-btn-${element}`);
+        idAudiovisual.classList.remove(`activate-btn-${element}`);
+        idMarketing.classList.remove(`activate-btn-${element}`);
+        idEstudio.classList.remove(`activate-btn-${element}`);
+        idBtn.classList.remove(`activate-btn-${element}`);
+
+        btnServiceMenu.forEach(function(btn) {
+          if (btn.classList.contains(`no-hover-btn-${element}`)) {
+            btn.classList.remove(`no-hover-btn-${element}`);
+          } 
+        });
+      }
+  })
+}
+
+//videos para reiniciar reproduccion
+document.addEventListener("DOMContentLoaded", function() {
   
-  // Desactivar todas las funciones si ya están activadas
-  var clase = "active-" + servicio;
-  if (enlace.classList.contains(clase)) {
-      enlace.classList.remove(clase);
-      return; // Salir de la función si ya está desactivada
+  let idNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  idNum.map(e => {
+    var video = document.getElementById(`video${e}`);
+  
+  function playVideo(video) {
+    video.style.display = "block";
+    video.currentTime = 0; // Reinicia el video al principio
+    video.play(); // Comienza a reproducir el video
   }
 
-  // Desactivar todas las funciones
-  for (var i = 0; i < enlaces.length; i++) {
-      var enlaceActual = enlaces[i];
-      var claseActual = "active-" + enlaceActual.id;
-      enlaceActual.classList.remove(claseActual);
+  function pauseVideo(video) {
+    video.style.display = "none";
+    video.pause(); // Pausa el video cuando no está visible
   }
+
+  // Eventos para el primer video
+  document.getElementById(`image${e}`).addEventListener("mouseenter", function() {
+    playVideo(video);
+  });
+
+  document.getElementById(`image${e}`).addEventListener("mouseleave", function() {
+    pauseVideo(video);
+  });
   
-  // Activar solo la función correspondiente al enlace clickeado
-  enlace.classList.toggle(clase);
-}
+  })
+  
+});
+
+
+/* let modalBtn = document.querySelector('.y-t');
+const modal = document.querySelector('.modal-bg');
+
+//Add click event to the button}
+modalBtn.addEventListener('click', () => {
+    modal.innerHTML = `
+    <div class="modal">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/lumNsOA4t7k?si=YqbaqfMe8biU5S7E&autoplay=1" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; 
+        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+        web-share" allowfullscreen></iframe>
+    </div>`;
+
+    //show modal
+    modal.style.display = "flex";
+    //smooth opacity transition
+    setTimeout(() => {
+        modal.style.opacity = "1";
+    }, 50);
+
+})
+
+//Add click event to the modal bg
+modal.addEventListener('click', () => {
+    //Remove youtube embed to the HTML
+    modal.innerHTML = '';
+    //smooth opacity transition
+    modal.style.opacity = "0";
+    setTimeout(() => {
+        //hide the modal when the transition is done
+        modal.style.display = "none";
+    }, 450);
+}) */
+
+
+let swiper2 = new Swiper(".mySwiper2", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  speed: 1500,
+  /* freeMode: true, */
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  
+});
+
+let swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 2,
+  spaceBetween: 20,
+  speed: 1500,
+  /* freeMode: true, */
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+      640: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 8,
+        spaceBetween: 20,
+      },
+    },
+  
+});
