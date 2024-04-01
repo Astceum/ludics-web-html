@@ -10,6 +10,8 @@ let idService = document.querySelector("#servicios");
 let idLudics = document.querySelector("#ludics");
 let idAndMore = document.querySelector("#and-more");
 
+let classBanner = document.querySelector(".banner");
+
 let idEvents = document.querySelector("#t_eventos");
 let idBuilding = document.querySelector("#t_building");
 let idAudiovisual = document.querySelector("#t_audiovisual");
@@ -150,15 +152,23 @@ function toggleLudics(){
     idLeft.classList.toggle('toggleLudics');
     classMenuHome.classList.toggle('toggleLudics');
     menuService2.classList.toggle('toggleLudics');
+    classBanner.classList.toggle('toggleLudics');
+
+    menuHome.forEach(function(btn) {
+      if (btn.classList.contains("no-hover-ludics")) {
+        btn.classList.remove("no-hover-ludics");
+      }else {
+        btn.classList.add("no-hover-ludics");
+      }})
     
-    /* if (ludicsActivo) {
+    if (ludicsActivo) {
       if (servicioActivo) {
          toggleService();
       }
-      if (andMoreActivo) {
+      /* if (andMoreActivo) {
         toggleAndMore();
-    }
     } */
+    }
 }
 
 function toggleAndMore(){
@@ -168,14 +178,21 @@ function toggleAndMore(){
     classMenuHome.classList.toggle('toggleAndMore');
     menuService3.classList.toggle('toggleAndMore');
     
-    /* if (andMoreActivo) {
+    menuHome.forEach(function(btn) {
+      if (btn.classList.contains("no-hover-and-more")) {
+        btn.classList.remove("no-hover-and-more");
+      }else {
+        btn.classList.add("no-hover-and-more");
+      }})
+    
+    if (andMoreActivo) {
       if (servicioActivo) {
          toggleService();
       }
-      if (ludicsActivo) {
+      /* if (ludicsActivo) {
         toggleLudics();
-    }
     } */
+    }
 }
 
 
@@ -283,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Eventos para el primer video
-  document.getElementById(`image${e}`).addEventListener("mouseenter", function() {
+  document.getElementById(`image${e}`).addEventListener("mouseover", function() {
     playVideo(video);
   });
 
@@ -331,6 +348,39 @@ modal.addEventListener('click', () => {
     }, 450);
 }) */
 
+
+// LUDICS
+function ScrollLudics() {
+  var div = document.getElementById('ludics');
+  var scrollTop = div.scrollTop;
+  var clientHeight = div.clientHeight;
+
+ 
+  var animationUp = document.getElementsByClassName('animation-up');
+  
+  aplicarEfecto(animationUp, scrollTop, clientHeight, 'translateY(-30px)');
+  
+}
+
+function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
+  for (var i = 0; i < imagenes.length; i++) {
+    var imagen = imagenes[i];
+    var imagenTop = imagen.offsetTop;
+    var imagenBottom = imagenTop + (imagen.clientHeight * 2); // Doble de la altura de la imagen
+    
+    // Comprueba si el doble de la altura de la imagen está dentro del div
+    if (imagenTop >= scrollTop && imagenBottom <= scrollTop + clientHeight) {
+      console.log('¡El doble de la altura de la imagen ' + i + ' está visible!');
+      // Aplica la animación cambiando la opacidad de la imagen a 1 y la transformación
+      imagen.style.opacity = '1';
+      imagen.style.transform = transformacion;
+    } else {
+      // Si el doble de la altura de la imagen no está completamente visible, establece la opacidad inicial y reinicia la transformación
+      imagen.style.opacity = '0';
+      imagen.style.transform = 'none';
+    }
+  }
+}
 
 let swiper2 = new Swiper(".mySwiper2", {
   slidesPerView: 1,
@@ -385,3 +435,38 @@ let swiper3 = new Swiper(".mySwiper3", {
     },
   
 });
+
+
+// Y MAS
+
+function ScrollAndMore() {
+  var div = document.getElementById('and-more');
+  var scrollTop = div.scrollTop;
+  var clientHeight = div.clientHeight;
+
+ 
+  var animationUp = document.getElementsByClassName('animation-up');
+  
+  aplicarEfecto(animationUp, scrollTop, clientHeight, 'translateY(-30px)');
+  
+}
+
+function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
+  for (var i = 0; i < imagenes.length; i++) {
+    var imagen = imagenes[i];
+    var imagenTop = imagen.offsetTop;
+    var imagenBottom = imagenTop + (imagen.clientHeight * 2); // Doble de la altura de la imagen
+    
+    // Comprueba si el doble de la altura de la imagen está dentro del div
+    if (imagenTop >= scrollTop && imagenBottom <= scrollTop + clientHeight) {
+      console.log('¡El doble de la altura de la imagen ' + i + ' está visible!');
+      // Aplica la animación cambiando la opacidad de la imagen a 1 y la transformación
+      imagen.style.opacity = '1';
+      imagen.style.transform = transformacion;
+    } else {
+      // Si el doble de la altura de la imagen no está completamente visible, establece la opacidad inicial y reinicia la transformación
+      imagen.style.opacity = '0';
+      imagen.style.transform = 'none';
+    }
+  }
+}

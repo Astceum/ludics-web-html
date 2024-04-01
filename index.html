@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./yMas.css">
     <title>Document</title>
 </head>
 <body>
@@ -30,7 +29,7 @@
                     
                         <a href="#" onclick="toggleService()"><h1 id="miElemento1" class="menu btn-menu">SERVICIOS</h1></a>
                         <a href="#" onclick="toggleLudics()"><h1 id="miElemento2" class="menu btn-menu">LUDICS</h1></a>
-                        <a href="#" onclick="toggleAndMore()"><h1 id="miElemento3" class="menu btn-menu">Y MÁS</h1></a>
+                        <a href="#" onclick="toggleAndMore()"><h1 id="miElemento3" class="menu btn-menu"><span class="space">Y</span>MÁS</h1></a>
                        
                 </div>
             </div>
@@ -56,17 +55,6 @@
 
                         <div class="video">                            
                             <h1 class="title-video">TITULO</br>VIDEO</h1>
-                            <div id="description-container">
-                                <div class="text-description">
-                                    <h1>DESCRIPCIÓN</h1>
-                                    <p>Contamos con un equipo de diseñadores creativos capacitados, para realizar y producir 
-                                        proyectos gráficos adaptados a los nuevos tiempos, usando formatos digitales y offset, 
-                                        con el fin de mejorar la experiencia de marca. Buscamos impulsar tus productos desde la 
-                                        innovación, e integrarlos constantemente a las nuevas tendencias, diseñando en conjunto 
-                                        tu idea hasta la implementación. Produciendo, Branding, Gigantografía, Packaging, 
-                                        Identidad de Marca y Marketing Digital.</p>
-                                </div>
-                            </div>
                             <a type="button" class="yt-modal-btn event1">
                                 <img id="image1" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
                                 <video id="video1" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
@@ -86,6 +74,15 @@
                                 <video id="video3" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
                             </a>
                         </div>
+                        <div class="text-description">
+                            <!-- <h1>DESCRIPCIÓN</h1> -->
+                            <p>Contamos con un equipo de diseñadores creativos capacitados, para realizar y producir 
+                                proyectos gráficos adaptados a los nuevos tiempos, usando formatos digitales y offset, 
+                                con el fin de mejorar la experiencia de marca. Buscamos impulsar tus productos desde la 
+                                innovación, e integrarlos constantemente a las nuevas tendencias, diseñando en conjunto 
+                                tu idea hasta la implementación. Produciendo, Branding, Gigantografía, Packaging, 
+                                Identidad de Marca y Marketing Digital.</p>
+                        </div>
 
                     </div>
                 </aside>
@@ -97,17 +94,7 @@
                         <div class="video">                            
                             <h1 class="title-video">TITULO</br>VIDEO</h1>
                             <div id="description-container">
-                                <div class="text-description">
-                                    <h1>DESCRIPCIÓN</h1>
-                                    <p>Nuestra área especializada en entretención nos ha proporcionado un producto único 
-                                        a la medida de nuestros clientes, este nuevo servicio nos ha llevado cada día a 
-                                        aumentar la expertiz en la elaboración de juegos con los más altos estándares de 
-                                        seguridad para una gran variedad de clientes en todo Chile, tanto para empresas 
-                                        públicas, privadas y canales de televisión siendo protagonistas de realities como 
-                                        Mundos Opuestos 1 y 2, Generaciones Cruzadas (Canal 13) y programas estelares como 
-                                        Vértigo (Canal 13), La Vega (TVN), Minuto para Ganar (CHV) entre otros. Nuestro objetivo 
-                                        es crear experiencias originales que sean entretenidas, que desafíen, provoquen e inspiren.</p>
-                                </div>
+                                
                             </div>
                             <a type="button" class="yt-modal-btn event1">
                                 <img id="image4" src="./img/eventos/FOTO_EVENT_3.webp" alt="" class="img-front">
@@ -128,7 +115,16 @@
                                 <video id="video6" src="./video/LUDICS _ Soprole Team Building.mp4" type="video/mp4" class="video-1" loop muted></video>
                             </a>
                         </div>
-
+                        <div class="text-description">
+                            <p>Nuestra área especializada en entretención nos ha proporcionado un producto único 
+                                a la medida de nuestros clientes, este nuevo servicio nos ha llevado cada día a 
+                                aumentar la expertiz en la elaboración de juegos con los más altos estándares de 
+                                seguridad para una gran variedad de clientes en todo Chile, tanto para empresas 
+                                públicas, privadas y canales de televisión siendo protagonistas de realities como 
+                                Mundos Opuestos 1 y 2, Generaciones Cruzadas (Canal 13) y programas estelares como 
+                                Vértigo (Canal 13), La Vega (TVN), Minuto para Ganar (CHV) entre otros. Nuestro objetivo 
+                                es crear experiencias originales que sean entretenidas, que desafíen, provoquen e inspiren.</p>
+                        </div>
                     </div>
                 </aside>
             </div>
@@ -216,20 +212,23 @@
 
         <!-- LUDICS -->
         <div id="t_ludics">
-            <aside id="ludics">
+            <aside id="ludics" onscroll="ScrollLudics()">
 
 
-                <div class="menu-ludics">
-
-                    <a href="#" class="btn"><h1 class="menu">SERVdwaICIOS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">SERVICIOS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">LUDICS</h1></a>
-                    <a href="#" class="btn"><h1 class="menu">Y MAS</h1></a>
-                    
-                    
+                <div class="container-ludics">
+                    <section class="img-team">
+                        <img id="ludics-team" src="./img/ludics/ludics-team.png" alt="">
+                    </section>
+                    <section class="img-squad">
+                        <img id="gradient-red" src="./img/ludics/gradient-red.png" alt="">
+                        <img id="ludics-squad" src="./img/ludics/ludics-squad.png" alt="">
+                    </section>
+                    <p class="description-ludics animation-up">
+                        LA PASIÓN POR LO QUE HACEMOS ES LO QUE NOS CARACTERIZA.
+                        <span>ENTUSIASTAS, INQUIETOS, ALEGRES, ESPONTÁNEOS, COMPROMETIDOS
+                        Y DETALLISTAS, ALGUNAS VECES DISPERSOS</span>, PERO ES LO QUE NOS 
+                        HACE UN EQUIPO DIFERENTE Y ÚNICO.
+                    </p>
                     <div class="slider-team">
                         <div class="swiper1">
             
@@ -238,7 +237,7 @@
                                     <img src="img/Carlos_Zamorano.jpg" alt="">
                                     <!-- <div class="title">
                                         <span>Nombres</span>
-                                    </div> -->                
+                                    </div>  -->               
                                 </div>                                    
                                 <div class="swiper-slide">
                                     <img src="img/Camila_Salvo.jpg" alt="">
@@ -260,7 +259,12 @@
                             <div class="swiper-pagination"></div>
                     
                         </div>
-                    </div>           
+                    </div>
+                    <div id="experiencia-title">
+                        <img src="./img/ludics/diseñadores-experiencia.png" alt="">
+                    </div>
+                    
+                    
                 </div>
                 
             </aside>
@@ -268,41 +272,147 @@
 
         <!-- Y MAS -->
         <div id="t_and_more">
-            <aside id="and-more">                    
+            <aside id="and-more" onscroll="ScrollAndMore()">            
                     
                     <div class="slider-portafolio">
                         <!-- Swiper -->
                         <div class="swiper2 mySwiper2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959586/ludics/laser-fx_zrlkna.webp" alt="">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959593/ludics/santander_vrvwk7.webp" alt="">
                                 </div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959590/ludics/reality-shows_vyg8zz.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959597/ludics/the-ludics-squad_gnpgje.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959595/ludics/THE-BIG-RACE_mqalgx.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959580/ludics/game-show_pjhhw5.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959577/ludics/beachgamr_iobkg8.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959600/ludics/team-challenge_prup6j.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959578/ludics/desafio-en-las-alturas_rggfvt.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959577/ludics/basic-outdoor_xu0we9.webp" alt="">
+                                </div>
                             </div>                            
                         </div>
 
                         <div dir="rtl" class="swiper3 mySwiper3">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">Slide 1</div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
-                                <div class="swiper-slide">Slide 5</div>
-                                <div class="swiper-slide">Slide 6</div>
-                                <div class="swiper-slide">Slide 7</div>
-                                <div class="swiper-slide">Slide 8</div>
-                                <div class="swiper-slide">Slide 9</div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959586/ludics/laser-fx_zrlkna.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959598/ludics/ultra-shocking_bve8os.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959591/ludics/performance-show_e3pk5i.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959594/ludics/ludics-plau_w7l5yd.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959589/ludics/panna-futbol_cjw2k2.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959581/ludics/BUMPER-BALLS_qw6ppi.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959582/ludics/corpgroup_foyqaf.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959584/ludics/outdoor_qgdlfb.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959588/ludics/music-studio_qmfc0i.webp" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://res.cloudinary.com/deiavzaxs/image/upload/v1710959585/ludics/imaginA-1_st56tm.webp" alt="">
+                                </div>
                             </div>    
-                        </div>
-                             
+                        </div>                             
                     </div>
+                    <div id="hablemos-title">
+                        <img src="./img/ludics/hablemos.png" alt="">
+                    </div>
+                    <div id="contact-ludics">
+                        <ul>
+                            <li>
+                                <img src="./img/ludics/mail.svg" alt="" height="92px" >
+                                <h2>INFO@LUDICS.CL</h2>
+                            </li>
+                            <li>
+                                <img src="./img/ludics/phone.svg" alt="" height="92px" >
+                                <h2>+56 9 8804 3665</h2>
+                            </li>
+                        </ul>                        
+                    </div>
+
+                    <section id="ubicacion-and-more">
+                        <img src="./img/ymas/title/ubicacion.png" alt="">
+                        <div class="coordenadas">
+                            <a href="https://maps.app.goo.gl/SxbFuLTTJrVdJ9cq7" target="_blank">
+                            <img src="./img/ymas/title/marco-ubicacion.png" alt="">
+                            <div class="text-ubicacion">
+                                <h1>AV. SIMÓN BOLÍVAR 1935</h1>
+                                <h4>33° 27' 04.7" <span>S</span>   70° 36' 40.0" <span>W</span></h4>
+                            </div>
+                            </a>
+                        </div>
+                    </section>
+                    <!-- AQUI IRIA EL MAPA -->
+
+
+                    <div id="title-company-and-more">
+                        <img src="./img/ymas/title/title-empresas.png" alt="" >
+                    </div>
+                    <section id="company-and-more" >
+                        <img src="./img/ymas/company/Afp Modelo.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Corpgroup.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Google.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Abastible.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Duoc UC.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/iplacex.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/LarrainVial.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Adidas.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/NotCo.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Entel.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/WOM.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Movistar.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/AFC.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Bco-estado.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/bco-ripley.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Bco-Security.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Mega.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Chv.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/T13.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/TVN.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Copec.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Fundacion-chile.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Chilquinta.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Natura.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/P&G.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Santander.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Smart-fit.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Soprole.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/Streat-burger.svg" class="company animation-up" alt="">
+                        <img src="./img/ymas/company/WEBER.svg" class="company animation-up" alt="">
+                    </section>
+                    
+                    <!-- <div id="portafolio-title">
+                        <img src="./img/ymas/title/title-portafolio.svg" alt="" width="700">
+                    </div> -->
                 
             </aside>
         </div>
