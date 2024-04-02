@@ -455,7 +455,7 @@ function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
   for (var i = 0; i < imagenes.length; i++) {
     var imagen = imagenes[i];
     var imagenTop = imagen.offsetTop;
-    var imagenBottom = imagenTop + (imagen.clientHeight * 2); // Doble de la altura de la imagen
+    var imagenBottom = imagenTop + (imagen.clientHeight * 1); // Doble de la altura de la imagen
     
     // Comprueba si el doble de la altura de la imagen está dentro del div
     if (imagenTop >= scrollTop && imagenBottom <= scrollTop + clientHeight) {

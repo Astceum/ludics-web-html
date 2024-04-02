@@ -127,9 +127,9 @@ body {
 
 .banner {
     position: relative;
-    padding-top     : 20px;
+    padding-top: 10px;
     background-color: #000000;
-    height: 100px;
+    height: 70px;
     z-index: 40;
     display: flex;
     justify-content: space-between;
@@ -138,8 +138,9 @@ body {
 }
 
 .logo-ludics {
-    height: 60px;
-    padding: 60px;
+    /* height: 60px; */
+    width: 200px;
+    padding: 0 20px 0 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,10 +149,12 @@ body {
 .social-media {
     height: 50px;
     margin: 60px;
+    display: flex;
+    align-items: center;
 }
 
 .logo-ig, .logo-tt, .logo-yt {
-    height: 50px;
+    height: 40px;
     margin: 10px;
 }
 
@@ -328,7 +331,7 @@ aside#servicios::-webkit-scrollbar {
 
 
 .menu-servicios {
-    padding-top: 150px;
+    padding-top: 120px;
     width: 100%;
     height: 100%;
     font-family: var(--font-family-menu);
@@ -341,7 +344,7 @@ aside#servicios::-webkit-scrollbar {
 }
 
 .menu-servicios .menu {
-    margin-bottom: 80px !important;
+    margin-bottom: 3% !important;
 }
 
 
@@ -412,15 +415,6 @@ aside#ludics::-webkit-scrollbar {
     
 }
 
-/* position: relative;
-    height: 100%;
-    background: #b16565;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
- */
 .banner.toggleLudics { 
     background-color: #00000060 ;
 }
@@ -429,12 +423,12 @@ aside#ludics::-webkit-scrollbar {
     position: relative;
     overflow-x: hidden;
     width: 100vw;
-    height: 90%;
+    height: 100%;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25%;
+    margin-bottom: 30%;
 }
 
 
@@ -450,33 +444,41 @@ aside#ludics::-webkit-scrollbar {
 .img-squad {
     position: absolute;
     overflow: hidden;
-    width: 100%;
-    height: 150%;
+    width: 100vw;
+    height: 170%;
     top: 0;
-    margin-top: 9%;
-    object-fit: cover;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #gradient-red {
     position: absolute;
     width: 100%;
-    top: -25vh;
-    left: 4%;
+    height: 100%;
+    object-fit: cover;
+
     z-index: -1;
 }
 
 #ludics-squad {
     position: absolute;
-    width: 759px;
+    width: 40%;
     left: 33%;
     padding-top: 26%;
     
 }
 
+#description-ludics {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .description-ludics {
     text-align: center; 
-    font-size: 20pt;
+    font-size: 165%;
     font-weight: 500;
     padding: 0 25%;
     font-family: var(--font-family-regular);
@@ -492,7 +494,8 @@ aside#ludics::-webkit-scrollbar {
 
 /* SLIDER LUDICS */
 .slider-team {
-    height: 75%;
+    position: relative;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,10 +548,28 @@ aside#ludics::-webkit-scrollbar {
     border-radius: 14px;
 }
 
-#experiencia-title {
+@media (max-height: 768px) {
+    .swiper1 .swiper-slide {
+        position: relative;
+        width: 400px; 
+        height: 400px;
+        aspect-ratio: 3/4;
+        border-radius: 14px;
+        border: 1px solid rgba(177,177,177,0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#experiencia-title{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#experiencia-title img {
+    width: 70%;
 }
 
 
@@ -599,7 +620,7 @@ aside#t_building,
 aside#t_audiovisual,
 aside#t_marketing,
 aside#t_estudio {
-    padding-top: 120px;
+    padding-top: 90px;
     width: 50%;
     height: 100%;
     left: 200%;
@@ -628,8 +649,8 @@ aside#t_estudio {
 
 .video {
     position: relative;
-    width: 885px;
-    height: 540px;
+    width: 95%;
+    height: 700%;
     margin-top: 3%;
     overflow: hidden;
 }
@@ -661,7 +682,7 @@ aside#t_estudio {
 .img-front {
     position: absolute;
     width: 100%;
-    height: 100%;
+    
     object-fit: cover;
     filter: grayscale(100%);
     z-index: 10;
@@ -697,9 +718,9 @@ aside#t_estudio {
     width: 90%;
     height: 80%;
     font-family: var(--font-family-menu);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 15pt;
-    color: var(--color-menu-red);
+    color: var(--color-menu-white);
 }
 
 .text-description p {
@@ -736,8 +757,9 @@ aside#t_estudio {
 
 .modal {
     width: 84vw;
+    height: 75%;
     position: relative;
-    padding-top: 50%;
+    /* padding-top: 50%; */
     margin: 2rem 0;
 }
 
@@ -802,7 +824,7 @@ aside#and-more::-webkit-scrollbar {
 .slider-portafolio {
     position: relative;
     height: 100%;
-    padding: 120px 50px 20px 50px;
+    padding: 90px 50px 20px 50px;
     margin: 0;
 }
 
@@ -840,18 +862,25 @@ aside#and-more::-webkit-scrollbar {
     object-fit: cover;
 }
 
-#hablemos-title {
+#hablemos-title{
+    width: 100%;
     padding-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#contact-ludics {
+#hablemos-title img {
+    width: 70%;
+}
+
+#contact-ludics ul {
+    width: 100%;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #contact-ludics h2 {
@@ -863,7 +892,7 @@ aside#and-more::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0;
+    margin: 1rem 0;
 }
 
 
@@ -874,6 +903,10 @@ aside#and-more::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#ubicacion-and-more .title-and-more {
+    width: 47%;
 }
 
 #ubicacion-and-more .coordenadas a {
@@ -909,7 +942,7 @@ aside#and-more::-webkit-scrollbar {
 
 
 
-#title-company-and-more {
+#title-company-and-more img {
     padding-top: 10%;
     width: 100%;
     display: flex;
@@ -920,9 +953,9 @@ aside#and-more::-webkit-scrollbar {
 #company-and-more {
     
     margin-top: 50px;
-    padding-bottom: 600px;
+    padding-bottom: 10%;
+    top: 0;
     width: 100%;
-    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -933,9 +966,9 @@ aside#and-more::-webkit-scrollbar {
 }
 
 .company {
-    height: 90px;
-    width: 300px;
-    margin: 40px 50px;
+    height: 80px;
+    width: 15%;
+    margin: 2% 3%;
 }
 
 .animation-up {
@@ -944,12 +977,10 @@ aside#and-more::-webkit-scrollbar {
 }
 
 
-
-/* #portafolio-title {
-    padding: 6% 0 ;
-    
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* @media (min-width: 768px) {
+    .company {
+        height: 90px;
+        width: 300px;
+        margin: 40px 50px;
+    }
 } */
