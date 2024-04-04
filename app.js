@@ -295,10 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
       video.play(); // Comienza a reproducir el video
     }
 
-    /* function pauseVideo(video) {
+    function pauseVideo(video) {
       video.style.display = "none";
       video.pause(); // Pausa el video cuando no está visible
-    } */
+    }
 
     // Eventos para el primer video
     /* image.addEventListener("mouseover", () => {
@@ -308,7 +308,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (image) {
       image.addEventListener("mouseover", () => {
+        image.style.opacity = 0;
         playVideo(video);
+      });
+    }
+    if (image) {
+      image.addEventListener("mouseleave", () => {
+        image.style.opacity = 1;
+        pauseVideo(video);
       });
     }
 
