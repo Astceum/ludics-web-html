@@ -129,7 +129,7 @@ body {
     position: relative;
     padding-top: 10px;
     background-color: #000000;
-    height: 70px;
+    /* height: 100%; */ /* 70px */
     z-index: 40;
     display: flex;
     justify-content: space-between;
@@ -148,7 +148,7 @@ body {
 
 .social-media {
     height: 50px;
-    margin: 60px;
+    padding: 0.5% 60px 0.5% 60px;
     display: flex;
     align-items: center;
 }
@@ -331,7 +331,7 @@ aside#servicios::-webkit-scrollbar {
 
 
 .menu-servicios {
-    padding-top: 120px;
+    padding-top: 90px;
     width: 100%;
     height: 100%;
     font-family: var(--font-family-menu);
@@ -619,7 +619,7 @@ aside#t_building,
 aside#t_audiovisual,
 aside#t_marketing,
 aside#t_estudio {
-    padding-top: 90px;
+    padding-top: 70px;
     width: 50%;
     height: 100%;
     left: 200%;
@@ -649,7 +649,7 @@ aside#t_estudio {
 .video {
     position: relative;
     width: 95%;
-    height: 700%;
+    height: 550%;
     margin-top: 3%;
     overflow: hidden;
 }
@@ -712,19 +712,20 @@ aside#t_estudio {
     right: -5%;
 }
 
-.text-description {
+.text-description-service {
     position: absolute;
-    width: 90%;
-    height: 80%;
+    width: 94%;
+    height: 60%;
     font-family: var(--font-family-menu);
-    font-weight: 500;
-    font-size: 15pt;
-    color: var(--color-menu-white);
+    /* font-weight: 500; */
+    font-variation-settings: "wght" 500, "wdth" 100;
+    font-size: 1.125rem;
+    color: var(--color-menu-hover);
 }
 
-.text-description p {
+.text-description-service p {
     margin: 40px 0;
-    line-height: 25px;
+    line-height: 2;
 }
 
 .video-1 {
@@ -823,7 +824,7 @@ aside#and-more::-webkit-scrollbar {
 .slider-portafolio {
     position: relative;
     height: 100%;
-    padding: 90px 50px 20px 50px;
+    padding: 70px 20px 20px 20px;
     margin: 0;
 }
 
@@ -870,8 +871,9 @@ aside#and-more::-webkit-scrollbar {
 }
 
 #hablemos-title img {
-    width: 70%;
+    width: 50%;
 }
+
 
 #contact-ludics ul {
     width: 100%;
@@ -879,70 +881,29 @@ aside#and-more::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
-#contact-ludics h2 {
-    margin-left: 50px;
-    font-size: 33pt;
+#contact-ludics img {
+    width: 65px;
 }
 
 #contact-ludics li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 1rem 2rem;
 }
 
-
-
-#ubicacion-and-more {
-    padding-top: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#ubicacion-and-more .title-and-more {
-    width: 47%;
-}
-
-#ubicacion-and-more .coordenadas a {
-    width: 100%;
-    position: relative;
-    margin: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-menu-white);
-}
-
-
-
-
-.text-ubicacion {
-    position: absolute;
-    text-align: center;
-    font-weight: 800;
-    font-size: 33pt;
-}
-
-.text-ubicacion h4 {
+#contact-ludics h2 {
+    margin-left: 50px;
     font-size: 26pt;
 }
 
-.text-ubicacion h4 span {
-    color: var(--color-menu-red);
-    font-weight: 800;
-    font-family: var(--font-family-menu);
-}
 
 
 
 #title-company-and-more img {
-    padding-top: 10%;
+    padding-top: 6%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -972,7 +933,7 @@ aside#and-more::-webkit-scrollbar {
 
 .animation-up {
     opacity: 0;
-    transition: opacity 1s ease, transform 0.5s ease;
+    transition: opacity 1.3s ease-in-out, transform 1.5s ease;
 }
 
 

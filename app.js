@@ -282,32 +282,37 @@ function btnActivate(numBtn) {
 }
 
 //videos para reiniciar reproduccion
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   
   let idNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
   idNum.map(e => {
-    var video = document.getElementById(`video${e}`);
+    let video = document.getElementById(`video${e}`);
+    let image = document.getElementById(`image${e}`);
   
-  function playVideo(video) {
-    video.style.display = "block";
-    video.currentTime = 0; // Reinicia el video al principio
-    video.play(); // Comienza a reproducir el video
-  }
+    function playVideo(video) {
+      video.style.display = "block";
+      video.currentTime = 0; // Reinicia el video al principio
+      video.play(); // Comienza a reproducir el video
+    }
 
-  function pauseVideo(video) {
-    video.style.display = "none";
-    video.pause(); // Pausa el video cuando no está visible
-  }
+    /* function pauseVideo(video) {
+      video.style.display = "none";
+      video.pause(); // Pausa el video cuando no está visible
+    } */
 
-  // Eventos para el primer video
-  document.getElementById(`image${e}`).addEventListener("mouseover", function() {
-    playVideo(video);
-  });
+    // Eventos para el primer video
+    /* image.addEventListener("mouseover", () => {
+      playVideo(video);
+    }); */
 
-  document.getElementById(`image${e}`).addEventListener("mouseleave", function() {
-    pauseVideo(video);
-  });
-  
+
+    if (image) {
+      image.addEventListener("mouseover", () => {
+        playVideo(video);
+      });
+    }
+
+
   })
   
 });
