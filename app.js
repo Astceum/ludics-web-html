@@ -165,9 +165,9 @@ function toggleLudics(){
       if (servicioActivo) {
          toggleService();
       }
-      /* if (andMoreActivo) {
+      if (andMoreActivo) {
         toggleAndMore();
-    } */
+    }
     }
 }
 
@@ -189,9 +189,9 @@ function toggleAndMore(){
       if (servicioActivo) {
          toggleService();
       }
-      /* if (ludicsActivo) {
+      if (ludicsActivo) {
         toggleLudics();
-    } */
+    }
     }
 }
 
