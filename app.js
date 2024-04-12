@@ -49,7 +49,7 @@ function moveCursor(e) {
 }
 
 let link = Array.from(document.querySelectorAll('a'));
-let play = Array.from(document.querySelectorAll('.video'));
+let play = Array.from(document.querySelectorAll('.ver'));
 
 /* link.forEach((link) => {
     link.addEventListener('mouseover', ()=>{
@@ -75,11 +75,12 @@ play.forEach((play) => {
     innerCursorPlay.classList.add('play');
     innerPlay.classList.add('play');
     innerPlay.innerHTML = `    
-      <h1>PLAY</h1>
+      <h1>VER</h1>
     `;
   })
   play.addEventListener('mouseleave', ()=>{
     innerCursorPlay.classList.remove('play');
+    innerPlay.classList.remove('play');
     innerPlay.innerHTML = `
     `;
   })
@@ -282,47 +283,47 @@ function btnActivate(numBtn) {
 }
 
 //videos para reiniciar reproduccion
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
   
-  let idNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-  idNum.map(e => {
-    let video = document.getElementById(`video${e}`);
-    let image = document.getElementById(`image${e}`);
+//   let idNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+//   idNum.map(e => {
+//     let video = document.getElementById(`video${e}`);
+//     let image = document.getElementById(`image${e}`);
   
-    function playVideo(video) {
-      video.style.display = "block";
-      video.currentTime = 0; // Reinicia el video al principio
-      video.play(); // Comienza a reproducir el video
-    }
+//     function playVideo(video) {
+//       video.style.display = "block";
+//       video.currentTime = 0; // Reinicia el video al principio
+//       video.play(); // Comienza a reproducir el video
+//     }
 
-    function pauseVideo(video) {
-      video.style.display = "none";
-      video.pause(); // Pausa el video cuando no está visible
-    }
+//     function pauseVideo(video) {
+//       video.style.display = "none";
+//       video.pause(); // Pausa el video cuando no está visible
+//     }
 
-    // Eventos para el primer video
-    /* image.addEventListener("mouseover", () => {
-      playVideo(video);
-    }); */
-
-
-    if (image) {
-      image.addEventListener("mouseover", () => {
-        image.style.opacity = 0;
-        playVideo(video);
-      });
-    }
-    if (image) {
-      image.addEventListener("mouseleave", () => {
-        image.style.opacity = 1;
-        pauseVideo(video);
-      });
-    }
+//     // Eventos para el primer video
+//     /* image.addEventListener("mouseover", () => {
+//       playVideo(video);
+//     }); */
 
 
-  })
+//     if (image) {
+//       image.addEventListener("mouseover", () => {
+//         image.style.opacity = 0;
+//         playVideo(video);
+//       });
+//     }
+//     if (image) {
+//       image.addEventListener("mouseleave", () => {
+//         image.style.opacity = 1;
+//         pauseVideo(video);
+//       });
+//     }
+
+
+//   })
   
-});
+// });
 
 
 /* let modalBtn = document.querySelector('.y-t');
