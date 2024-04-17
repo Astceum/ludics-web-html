@@ -28,6 +28,8 @@ let menuService3 = document.getElementById("miElemento3")
 let servicioActivo = false;
 let ludicsActivo = false;
 let andMoreActivo = false;
+let logoActivo = false;
+let btnServiceActivo = false;
 
 
 document.addEventListener('mousemove', moveCursor);
@@ -117,10 +119,30 @@ play.forEach((play) => {
 }) */
 
 
-document.getElementById('logoLudics').addEventListener('click', function() {
-  // Recargar la página
-  location.reload();
-});
+// document.getElementById('logoLudics').addEventListener('click', function() {
+  
+//   location.reload();
+// });
+
+
+function toggleLogo() {
+  logoActivo = !logoActivo;
+
+  if (logoActivo) {
+    if (btnServiceActivo) {
+      btnActivate();
+    }
+    if (ludicsActivo) {
+      toggleLudics();
+    }
+    if (andMoreActivo) {
+      toggleAndMore();
+    }
+    if (servicioActivo) {
+      toggleService();
+    }
+  }
+}
 
 
 function toggleService(){
@@ -138,12 +160,15 @@ function toggleService(){
         }})
 
     if (servicioActivo) {
+      if (btnServiceActivo) {
+        btnActivate();
+      }
       if (ludicsActivo) {
-          toggleLudics();
+        toggleLudics();
       }
       if (andMoreActivo) {
         toggleAndMore();
-    }
+      }
     }
 }
 
@@ -168,7 +193,10 @@ function toggleLudics(){
       }
       if (andMoreActivo) {
         toggleAndMore();
-    }
+      }
+      if (btnServiceActivo) {
+        btnActivate();
+      }
     }
 }
 
@@ -192,7 +220,10 @@ function toggleAndMore(){
       }
       if (ludicsActivo) {
         toggleLudics();
-    }
+      }
+      if (btnServiceActivo) {
+        btnActivate();
+      }
     }
 }
 
@@ -235,6 +266,8 @@ let btnServiceMenu = document.querySelectorAll('.btn-1');
 
 // Función para activar el botón correspondiente
 function btnActivate(numBtn) {
+
+  btnServiceActivo = !btnServiceActivo;
 
   let btnNumber = [1, 2, 3, 4, 5]
   btnNumber.map(element => {
