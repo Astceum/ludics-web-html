@@ -18,7 +18,14 @@ let idAudiovisual = document.querySelector("#t_audiovisual");
 let idMarketing = document.querySelector("#t_marketing");
 let idEstudio = document.querySelector("#t_estudio");
 
+let containerHome = document.querySelector(".container-home");
 let classMenuHome = document.querySelector(".menu-home")
+let lineMenu = document.querySelector(".line");
+let lineMenuH2 = document.querySelector(".line-h2");
+let lineMenuH22 = document.querySelector(".line-h22");
+let lineMenuH222 = document.querySelector(".line-h222");
+let lineRed = document.querySelector(".redLudics");
+let lineRed2 = document.querySelector(".redAndMore");
 let idLeft = document.querySelector("#left");
 
 let menuService = document.getElementById("miElemento1")
@@ -126,9 +133,8 @@ play.forEach((play) => {
 
 
 function toggleLogo() {
-  logoActivo = !logoActivo;
 
-  if (logoActivo) {
+  if (!logoActivo) {
     if (btnServiceActivo) {
       btnActivate();
     }
@@ -151,6 +157,7 @@ function toggleService(){
     idLeft.classList.toggle('toggleService');
     classMenuHome.classList.toggle('toggleService');
     menuService.classList.toggle('toggleService');
+    containerHome.classList.toggle('toggleService');
     
       menuHome.forEach(function(btn) {
         if (btn.classList.contains("no-hover")) {
@@ -161,6 +168,9 @@ function toggleService(){
 
     if (servicioActivo) {
       if (btnServiceActivo) {
+        if (servicioActivo) {
+          toggleService();
+        }
         btnActivate();
       }
       if (ludicsActivo) {
@@ -179,6 +189,11 @@ function toggleLudics(){
     classMenuHome.classList.toggle('toggleLudics');
     menuService2.classList.toggle('toggleLudics');
     classBanner.classList.toggle('toggleLudics');
+    containerHome.classList.toggle('toggleLudics');
+    lineMenu.classList.toggle('toggleLudics');
+    lineMenuH2.classList.toggle('toggleLudics');
+    lineMenuH22.classList.toggle('toggleLudics');
+    lineRed.classList.toggle('toggleLudics');
 
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-ludics")) {
@@ -206,6 +221,11 @@ function toggleAndMore(){
     idLeft.classList.toggle('toggleAndMore');
     classMenuHome.classList.toggle('toggleAndMore');
     menuService3.classList.toggle('toggleAndMore');
+    containerHome.classList.toggle('toggleAndMore');
+    lineMenu.classList.toggle('toggleAndMore');
+    lineMenuH2.classList.toggle('toggleAndMore');
+    lineMenuH222.classList.toggle('toggleAndMore');
+    lineRed2.classList.toggle('toggleAndMore');
     
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-and-more")) {
@@ -516,3 +536,5 @@ function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
     }
   }
 }
+
+

@@ -194,14 +194,12 @@ body {
 #left.toggleService,
 #left.toggleLudics,
 #left.toggleAndMore {
-    width: 20%;
-    height: 100%;
+    width: 21%;
+    height: 35vh;
+    margin-top: 65vh;
     transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1);
 }
 
-#left.toggleAndMore {
-    visibility: hidden;
-}
 
 #left.activate-btn-1,
 #left.activate-btn-2,
@@ -218,7 +216,67 @@ body {
     width: 100%;
     height: 97%;
     position: absolute;
-   
+}
+
+.container-home.toggleService {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: end;
+    transition: height 1s ;
+}
+
+.container-home.toggleLudics,
+.container-home.toggleAndMore {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: end;
+    transition: height 1s ;
+}
+
+.line.toggleLudics,
+.line.toggleAndMore {
+    bottom: 0;
+    margin-bottom: 42px;
+    color: transparent;
+    line-height: 4.45vw;
+    /* background-color: #77ff00;
+    border-left: 8px solid #ff00a2; */
+    z-index: 80;
+}
+
+
+.line-h2.toggleLudics,
+.line-h2.toggleAndMore,
+.line-h222.toggleAndMore {
+    
+    border-left: 8px solid var(--color-menu-hover);
+    margin-top: 0.8vw;
+    width: 100%;
+    
+}
+
+
+.line-h22.toggleLudics {
+    border-left: 8px solid var(--color-menu-hover);
+    margin-top: 0.8vw ;
+    width: 100%;
+}
+
+.redLudics.toggleLudics,
+.redAndMore.toggleAndMore {
+    border-left: 8px solid #cd0d17 !important;
+    margin-top: 0.8vw;
 }
 
 .menu-home {
@@ -240,20 +298,42 @@ body {
     margin-right: 0.4em;
 }
 
-.menu-home.toggleService,
-.menu-home.toggleLudics {
+.menu-home.toggleService{
+    width: 100%;
+    margin-bottom: 30px;
     font-size: 4vw;
-    line-height: 5vw;
+    line-height: 5.1vw;
     transform: scaleX(0.5);
+}
+
+.menu-home.toggleLudics,
+.menu-home.toggleAndMore {
+    width: 100%;
+    margin-bottom: 30px;
+    left: -100%;
+    font-size: 4vw;
+    line-height: 5.1vw;
+    transform: scaleX(0.5);
+    transition: left 1s, font-size 1s, line-height 1s, transform 1s ;
+    /* background-color: #7c0307; */
     
 }
 
-.menu-home.toggleAndMore {
+
+
+
+
+
+.container-home:hover .menu-home {
+    left: 0;
+}
+
+/* .menu-home.toggleAndMore {
     font-size: 4vw;
     line-height: 5vw;
     transform: scaleX(0.5);
     transition: all 0.7s;
-}
+} */
 
 
 .menu-home.activate-btn-1,
@@ -280,7 +360,8 @@ body {
 
 .menu,
 .menu-servicios.menu {
-    margin-left: 80px;
+    margin-left: 60px;
+    padding-left: 20px;
     font-weight: 1000;
     transition: font-weight 0.4s;
 }
@@ -290,19 +371,26 @@ body {
     color: var(--color-menu-red);
 }
 
-.no-hover,
-.no-hover-ludics,
-.no-hover-and-more {
+.no-hover {
+
     font-weight: 100;
     margin-left: 130px;
     margin-bottom: 0.8%;
     color: var(--color-menu-hover);
-    
 }
+.no-hover-ludics,
+.no-hover-and-more {
+    font-weight: 100;
+    margin-left: 30px; 
+    margin-bottom: 0.8%;
+    color: var(--color-menu-hover);
+}
+
 
 .no-hover:hover,
 #miElemento1.toggleService,
-#miElemento2.toggleLudics {
+#miElemento2.toggleLudics,
+#miElemento3.toggleAndMore {
     color: var(--color-menu-red);
 }
 
@@ -351,8 +439,8 @@ aside#servicios::-webkit-scrollbar {
 
 .menu-servicios {
     padding-top: 90px;
+    margin-bottom: 30px;
     width: 100%;
-    height: 100%;
     font-family: var(--font-family-menu);
     display: inline-block; /* Asegura que el span ocupe solo el ancho de su contenido */
     transform: scaleX(1.05); /* Escala horizontalmente el contenido */
@@ -523,7 +611,7 @@ aside#ludics::-webkit-scrollbar {
 /* SLIDER LUDICS */
 .slider-team {
     position: relative;
-    height: 70%;
+    height: 80%;
     
     display: flex;
     justify-content: center;
@@ -549,6 +637,11 @@ aside#ludics::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
+}
+
+.swiper-slide-active{
+    filter: grayscale(0%) !important;
 }
 
 .swiper1 .swiper-slide img {
@@ -567,14 +660,14 @@ aside#ludics::-webkit-scrollbar {
 .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
-    background-color: #5f5f5f;
+    background-color: var(--color-menu-hover);
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {
     width: 32px;
-    background-color: rgba(25, 43, 206, 1);
+    background-color: var(--color-menu-red);
     border-radius: 14px;
 }
 
@@ -593,7 +686,7 @@ aside#ludics::-webkit-scrollbar {
 }
 
 #experiencia-title{
-    height: 50%;
+    height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -999,7 +1092,7 @@ aside#and-more::-webkit-scrollbar {
 }
 
 #hablemos-title img {
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -1012,7 +1105,7 @@ aside#and-more::-webkit-scrollbar {
 }
 
 #contact-ludics img {
-    width: 65px;
+    width: 50px;
 }
 
 #contact-ludics li {
@@ -1024,7 +1117,7 @@ aside#and-more::-webkit-scrollbar {
 
 #contact-ludics h2 {
     margin-left: 50px;
-    font-size: 26pt;
+    font-size: 20pt;
 }
 
 
@@ -1072,3 +1165,10 @@ aside#and-more::-webkit-scrollbar {
         margin: 40px 50px;
     }
 } */
+
+@media screen and (max-width: 1440px) {
+    .line.toggleLudics,
+    .line.toggleAndMore {
+        line-height: 4.4vw;
+    }
+}
