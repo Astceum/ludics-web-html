@@ -1,8 +1,13 @@
 let innerCursor = document.querySelector(".inner-cursor");
 let outerCursor = document.querySelector(".outer-cursor");
 let innerCursorPlay = document.querySelector(".inner-cursor-play");
-let outerCursorPlay = document.querySelector(".outer-cursor-play");
 let innerPlay = document.querySelector(".innerPlay");
+
+let logoU = document.getElementById('logo-U');
+let logoD = document.getElementById('logo-D');
+let logoI = document.getElementById('logo-I');
+let logoC = document.getElementById('logo-C');
+let logoS = document.getElementById('logo-S');
 
 let menuHome = document.querySelectorAll(".btn-menu");
 
@@ -51,8 +56,6 @@ function moveCursor(e) {
     innerCursorPlay.style.top = `${y}px`;
     outerCursor.style.left = `${x}px`;
     outerCursor.style.top = `${y}px`;
-    outerCursorPlay.style.left = `${x}px`;
-    outerCursorPlay.style.top = `${y}px`;
     innerPlay.style.left = `${x}px`;
     innerPlay.style.top = `${y}px`;
 }
@@ -60,14 +63,6 @@ function moveCursor(e) {
 let link = Array.from(document.querySelectorAll('a'));
 let play = Array.from(document.querySelectorAll('.ver'));
 
-/* link.forEach((link) => {
-    link.addEventListener('mouseover', ()=>{
-        innerCursor.classList.add('grow');
-    })
-    link.addEventListener('mouseleave', ()=>{
-        innerCursor.classList.remove('grow');
-    })
-}) */
 
 link.forEach((link) => {
     link.addEventListener('mouseover', ()=>{
@@ -90,46 +85,9 @@ play.forEach((play) => {
   play.addEventListener('mouseleave', ()=>{
     innerCursorPlay.classList.remove('play');
     innerPlay.classList.remove('play');
-    innerPlay.innerHTML = `
-    `;
+    innerPlay.innerHTML = ``;
   })
 })
-
-play.forEach((play) => {
-  play.addEventListener('mouseover', ()=>{
-    outerCursorPlay.classList.add('play');
-    
-  })
-  play.addEventListener('mouseleave', ()=>{
-    outerCursorPlay.classList.remove('play');
-    
-  })
-})
-
-
-/* play.forEach((play) => {
-  play.addEventListener('mouseover', ()=>{
-    innerCursorPlay.classList.add('play');
-  })
-  play.addEventListener('mouseleave', ()=>{
-    innerCursorPlay.classList.remove('play');
-  })
-})
-
-play.forEach((play) => {
-  play.addEventListener('mouseover', ()=>{
-    outerCursorPlay.classList.add('play');
-  })
-  play.addEventListener('mouseleave', ()=>{
-    outerCursorPlay.classList.remove('play');
-  })
-}) */
-
-
-// document.getElementById('logoLudics').addEventListener('click', function() {
-  
-//   location.reload();
-// });
 
 
 function toggleLogo() {
@@ -158,6 +116,11 @@ function toggleService(){
     classMenuHome.classList.toggle('toggleService');
     menuService.classList.toggle('toggleService');
     containerHome.classList.toggle('toggleService');
+    logoU.classList.toggle('toggleService');
+    logoD.classList.toggle('toggleService');
+    logoI.classList.toggle('toggleService');
+    logoC.classList.toggle('toggleService');
+    logoS.classList.toggle('toggleService');
     
       menuHome.forEach(function(btn) {
         if (btn.classList.contains("no-hover")) {
@@ -166,16 +129,16 @@ function toggleService(){
           btn.classList.add("no-hover");
         }})
 
-        if (servicioActivo) {
-          if (ludicsActivo) {
-            toggleLudics();
-          }
-          if (andMoreActivo) {
-            toggleAndMore();
-          }
-        } else {
-          // Si servicioActivo está desactivado, desactiva btnActivate si está activo
-          if (btnServiceActivo) {
+      if (servicioActivo) {
+        if (ludicsActivo) {
+          toggleLudics();
+        }
+        if (andMoreActivo) {
+          toggleAndMore();
+        }
+      } else {
+        // Si servicioActivo está desactivado, desactiva btnActivate si está activo
+        if (btnServiceActivo) {
             btnActivate();
           }
         }
@@ -193,6 +156,11 @@ function toggleLudics(){
     lineMenuH2.classList.toggle('toggleLudics');
     lineMenuH22.classList.toggle('toggleLudics');
     lineRed.classList.toggle('toggleLudics');
+    logoU.classList.toggle('toggleLudics');
+    logoD.classList.toggle('toggleLudics');
+    logoI.classList.toggle('toggleLudics');
+    logoC.classList.toggle('toggleLudics');
+    logoS.classList.toggle('toggleLudics');
 
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-ludics")) {
@@ -225,6 +193,11 @@ function toggleAndMore(){
     lineMenuH2.classList.toggle('toggleAndMore');
     lineMenuH222.classList.toggle('toggleAndMore');
     lineRed2.classList.toggle('toggleAndMore');
+    logoU.classList.toggle('toggleAndMore');
+    logoD.classList.toggle('toggleAndMore');
+    logoI.classList.toggle('toggleAndMore');
+    logoC.classList.toggle('toggleAndMore');
+    logoS.classList.toggle('toggleAndMore');
     
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-and-more")) {
@@ -334,84 +307,6 @@ function btnActivate(numBtn) {
   })
 }
 
-//videos para reiniciar reproduccion
-// document.addEventListener("DOMContentLoaded", () => {
-  
-//   let idNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-//   idNum.map(e => {
-//     let video = document.getElementById(`video${e}`);
-//     let image = document.getElementById(`image${e}`);
-  
-//     function playVideo(video) {
-//       video.style.display = "block";
-//       video.currentTime = 0; // Reinicia el video al principio
-//       video.play(); // Comienza a reproducir el video
-//     }
-
-//     function pauseVideo(video) {
-//       video.style.display = "none";
-//       video.pause(); // Pausa el video cuando no está visible
-//     }
-
-//     // Eventos para el primer video
-//     /* image.addEventListener("mouseover", () => {
-//       playVideo(video);
-//     }); */
-
-
-//     if (image) {
-//       image.addEventListener("mouseover", () => {
-//         image.style.opacity = 0;
-//         playVideo(video);
-//       });
-//     }
-//     if (image) {
-//       image.addEventListener("mouseleave", () => {
-//         image.style.opacity = 1;
-//         pauseVideo(video);
-//       });
-//     }
-
-
-//   })
-  
-// });
-
-
-/* let modalBtn = document.querySelector('.y-t');
-const modal = document.querySelector('.modal-bg');
-
-//Add click event to the button}
-modalBtn.addEventListener('click', () => {
-    modal.innerHTML = `
-    <div class="modal">
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/lumNsOA4t7k?si=YqbaqfMe8biU5S7E&autoplay=1" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; 
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-        web-share" allowfullscreen></iframe>
-    </div>`;
-
-    //show modal
-    modal.style.display = "flex";
-    //smooth opacity transition
-    setTimeout(() => {
-        modal.style.opacity = "1";
-    }, 50);
-
-})
-
-//Add click event to the modal bg
-modal.addEventListener('click', () => {
-    //Remove youtube embed to the HTML
-    modal.innerHTML = '';
-    //smooth opacity transition
-    modal.style.opacity = "0";
-    setTimeout(() => {
-        //hide the modal when the transition is done
-        modal.style.display = "none";
-    }, 450);
-}) */
 
 
 // LUDICS
