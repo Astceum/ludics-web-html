@@ -166,20 +166,19 @@ function toggleService(){
           btn.classList.add("no-hover");
         }})
 
-    if (servicioActivo) {
-      if (btnServiceActivo) {
         if (servicioActivo) {
-          toggleService();
+          if (ludicsActivo) {
+            toggleLudics();
+          }
+          if (andMoreActivo) {
+            toggleAndMore();
+          }
+        } else {
+          // Si servicioActivo está desactivado, desactiva btnActivate si está activo
+          if (btnServiceActivo) {
+            btnActivate();
+          }
         }
-        btnActivate();
-      }
-      if (ludicsActivo) {
-        toggleLudics();
-      }
-      if (andMoreActivo) {
-        toggleAndMore();
-      }
-    }
 }
 
 function toggleLudics(){

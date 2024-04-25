@@ -965,7 +965,7 @@ aside#and-more {
     background-color: #000;
     display: flex;
     flex-direction: column;
-    transition: all 1.5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
     z-index: 1;
 }
 
