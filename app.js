@@ -93,9 +93,7 @@ play.forEach((play) => {
 function toggleLogo() {
 
   if (!logoActivo) {
-    if (btnServiceActivo) {
-      btnActivate();
-    }
+    
     if (ludicsActivo) {
       toggleLudics();
     }
@@ -105,7 +103,13 @@ function toggleLogo() {
     if (servicioActivo) {
       toggleService();
     }
-  }
+  } else {
+    // Si servicioActivo está desactivado, desactiva btnActivate si está activo
+    if (!btnServiceActivo) {
+        btnActivate()
+
+      }
+    }
 }
 
 
@@ -139,7 +143,7 @@ function toggleService(){
       } else {
         // Si servicioActivo está desactivado, desactiva btnActivate si está activo
         if (btnServiceActivo) {
-            btnActivate();
+            btnActivate()
           }
         }
 }
