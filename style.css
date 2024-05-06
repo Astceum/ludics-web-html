@@ -1166,7 +1166,19 @@ aside#and-more::-webkit-scrollbar {
     font-size: 20pt;
 }
 
-
+@media  screen and (max-width: 1440px) {
+    #contact-ludics img {
+        width: 45px;
+    }
+    #contact-ludics li {
+        margin: 1rem 1rem;
+    }
+    
+    #contact-ludics h2 {
+        margin-left: 20px;
+        font-size: 18pt;
+    }
+}
 
 
 #title-company-and-more img {
