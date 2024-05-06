@@ -105,13 +105,12 @@ function toggleLogo() {
     }
   } else {
     // Si servicioActivo está desactivado, desactiva btnActivate si está activo
-    if (!btnServiceActivo) {
         btnActivate()
 
-      }
     }
 }
 
+let animacionActiva = false;
 
 function toggleService(){
   servicioActivo = !servicioActivo;
@@ -125,6 +124,8 @@ function toggleService(){
     logoI.classList.toggle('toggleService');
     logoC.classList.toggle('toggleService');
     logoS.classList.toggle('toggleService');
+
+    
     
       menuHome.forEach(function(btn) {
         if (btn.classList.contains("no-hover")) {
@@ -133,18 +134,49 @@ function toggleService(){
           btn.classList.add("no-hover");
         }})
 
+        
+
+        if (animacionActiva) {
+          anime({
+            targets: ".menu-servicios a h1",
+            translateX: 0,
+            left: 0,
+            easing: "easeInOutSine",
+            opacity: 1,
+            direction: "normal",
+            complete: () => { animacionActiva = false; } // Marcar la animación como desactivada
+          });
+        } else {
+          anime({
+            targets: ".menu-servicios a h1",
+            translateX: 500,
+            easing: "easeInOutSine",
+            opacity: 1,
+            direction: "reverse",
+            delay: (el, i) => { return i * 200 },
+            complete: () => { animacionActiva = true; } // Marcar la animación como activada
+          });
+        }
+
+
       if (servicioActivo) {
+        console.log("servicio", servicioActivo);
         if (ludicsActivo) {
+          console.log("ludics",ludicsActivo);
           toggleLudics();
         }
         if (andMoreActivo) {
+          console.log("andMore",andMoreActivo);
           toggleAndMore();
         }
       } else {
+        console.log("servicio", servicioActivo);
+        console.log("servicioactivo", btnServiceActivo)
         // Si servicioActivo está desactivado, desactiva btnActivate si está activo
-        if (btnServiceActivo) {
+        
+          console.log("btn", btnServiceActivo)
             btnActivate()
-          }
+          
         }
 }
 
@@ -209,7 +241,7 @@ function toggleAndMore(){
       }else {
         btn.classList.add("no-hover-and-more");
       }})
-    
+
     if (andMoreActivo) {
       if (servicioActivo) {
          toggleService();
@@ -260,8 +292,12 @@ let swiper1 = new Swiper(".swiper1", {
 let classMenuService = document.querySelector(".menu-servicios");
 let btnServiceMenu = document.querySelectorAll('.btn-1');
 
+let animacionBtnActiva = false;
+
 // Función para activar el botón correspondiente
 function btnActivate(numBtn) {
+
+  
 
   btnServiceActivo = !btnServiceActivo;
 
@@ -308,29 +344,41 @@ function btnActivate(numBtn) {
           } 
         });
       }
+      
   })
+
+  
+
 }
 
 
+// anime.timeline().add({
+//   targets: toggleService(),
+//   translateY: [100, 0],
+//   easing: "easeOutExpo",
+//   opacity: 1,
+//   duration: 1700,
+//   delay: (el, i) => 400 + 70 * i
+// })
 
 // LUDICS
 function ScrollLudics() {
-  var div = document.getElementById('ludics');
-  var scrollTop = div.scrollTop;
-  var clientHeight = div.clientHeight;
+  let div = document.getElementById('ludics');
+  let scrollTop = div.scrollTop;
+  let clientHeight = div.clientHeight;
 
  
-  var animationUp = document.getElementsByClassName('animation-up');
+  let animationUp = document.getElementsByClassName('animation-up');
   
   aplicarEfecto(animationUp, scrollTop, clientHeight, 'translateY(-30px)');
   
 }
 
 function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
-  for (var i = 0; i < imagenes.length; i++) {
-    var imagen = imagenes[i];
-    var imagenTop = imagen.offsetTop;
-    var imagenBottom = imagenTop + (imagen.clientHeight * 2); // Doble de la altura de la imagen
+  for (let i = 0; i < imagenes.length; i++) {
+    let imagen = imagenes[i];
+    let imagenTop = imagen.offsetTop;
+    let imagenBottom = imagenTop + (imagen.clientHeight * 2); // Doble de la altura de la imagen
     
     // Comprueba si el doble de la altura de la imagen está dentro del div
     if (imagenTop >= scrollTop && imagenBottom <= scrollTop + clientHeight) {
@@ -404,22 +452,22 @@ let swiper3 = new Swiper(".mySwiper3", {
 // Y MAS
 
 function ScrollAndMore() {
-  var div = document.getElementById('and-more');
-  var scrollTop = div.scrollTop;
-  var clientHeight = div.clientHeight;
+  let div = document.getElementById('and-more');
+  let scrollTop = div.scrollTop;
+  let clientHeight = div.clientHeight;
 
  
-  var animationUp = document.getElementsByClassName('animation-up');
+  let animationUp = document.getElementsByClassName('animation-up');
   
   aplicarEfecto(animationUp, scrollTop, clientHeight, 'translateY(-30px)');
   
 }
 
 function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
-  for (var i = 0; i < imagenes.length; i++) {
-    var imagen = imagenes[i];
-    var imagenTop = imagen.offsetTop;
-    var imagenBottom = imagenTop + (imagen.clientHeight * 1); // Doble de la altura de la imagen
+  for (let i = 0; i < imagenes.length; i++) {
+    let imagen = imagenes[i];
+    let imagenTop = imagen.offsetTop;
+    let imagenBottom = imagenTop + (imagen.clientHeight * 1); // Doble de la altura de la imagen
     
     // Comprueba si el doble de la altura de la imagen está dentro del div
     if (imagenTop >= scrollTop && imagenBottom <= scrollTop + clientHeight) {
