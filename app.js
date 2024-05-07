@@ -297,6 +297,15 @@ let animacionBtnActiva = false;
 // Función para activar el botón correspondiente
 function btnActivate(numBtn) {
 
+    anime({
+      targets: `.animate-${numBtn}`,
+      translateX: 800,
+      easing: "easeInOutSine",
+      direction: "reverse",
+      delay: (el, i) => { return i * 300 }
+    });
+  
+  
   
 
   btnServiceActivo = !btnServiceActivo;

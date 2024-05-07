@@ -785,14 +785,14 @@ footer {
     position: sticky;
     width: 100%;
     bottom: 0;
-    height: 100vh; /* footer height */
+    height: calc(100vh - 130px); /* footer height */
     z-index: -80;
 }
 
 .banner-img-video {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 130px);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -806,6 +806,15 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-height: 830px) {
+    footer {
+        height: calc(100vh - 125px); /* footer height */
+    }
+    footer.banner-img-video {
+        height: calc(100vh - 125px);
+    }
 }
 
 /* SECCION BOTONES SERVICIOS VIDEOS */
@@ -846,6 +855,7 @@ footer {
 #marketing .activate-btn-4,
 #estudio .activate-btn-5 {
     transform: translateX(-300%);
+    transition: all 1s cubic-bezier(0.5, 0.1, 0.25, 1) !important;
 }
 
 aside#t_eventos,
@@ -861,7 +871,7 @@ aside#t_estudio {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+    transition: all 1s cubic-bezier(0.5, 0.1, 0.25, 1) !important;
 }
 
 #t_eventos::-webkit-scrollbar,
@@ -903,6 +913,11 @@ aside#t_estudio {
 
 .video .video-1 {
     width: 100%;
+    opacity: 0;
+}
+
+.video:hover .video-1 {
+    opacity: 1;
 }
 
 .title-video {
