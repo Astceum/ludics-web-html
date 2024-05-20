@@ -261,7 +261,8 @@ body {
 #left.activate-btn-2,
 #left.activate-btn-3,
 #left.activate-btn-4,
-#left.activate-btn-5 {
+#left.activate-btn-5,
+#left.activate-btn-6 {
     width: 19.5%;
 }
 
@@ -389,7 +390,8 @@ body {
 .menu-home.activate-btn-2,
 .menu-home.activate-btn-3,
 .menu-home.activate-btn-4,
-.menu-home.activate-btn-5 {
+.menu-home.activate-btn-5,
+.menu-home.activate-btn-6 {
     font-size: 3vw;
     line-height: 4vw;
     transform: scaleX(0.5);
@@ -465,7 +467,8 @@ aside {
 #servicios.activate-btn-2,
 #servicios.activate-btn-3,
 #servicios.activate-btn-4,
-#servicios.activate-btn-5 {
+#servicios.activate-btn-5,
+#servicios.activate-btn-6 {
     transform: translateX(-304%);
     transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
 }
@@ -511,7 +514,8 @@ aside#servicios::-webkit-scrollbar {
 .menu-servicios.activate-btn-2,
 .menu-servicios.activate-btn-3,
 .menu-servicios.activate-btn-4,
-.menu-servicios.activate-btn-5 {
+.menu-servicios.activate-btn-5,
+.menu-servicios.activate-btn-6 {
     font-size: 6vw;
     line-height: 7vw;
     transform: scaleX(0.4);
@@ -521,7 +525,8 @@ aside#servicios::-webkit-scrollbar {
 .menu-servicios.menu.activate-btn-2,
 .menu-servicios.menu.activate-btn-3,
 .menu-servicios.menu.activate-btn-4,
-.menu-servicios.menu.activate-btn-5 {
+.menu-servicios.menu.activate-btn-5,
+.menu-servicios.menu.activate-btn-6 {
     font-weight: 100;
 }
 
@@ -828,7 +833,8 @@ footer {
 .no-hover-btn-2,
 .no-hover-btn-3,
 .no-hover-btn-4,
-.no-hover-btn-5 {
+.no-hover-btn-5,
+.no-hover-btn-6 {
     font-weight: 100;
     color: var(--color-menu-hover);
     transition: font-weight 0.3s ease-in-out;
@@ -838,7 +844,8 @@ footer {
 .no-hover-btn-2:hover,
 .no-hover-btn-3:hover,
 .no-hover-btn-4:hover,
-.no-hover-btn-5:hover {
+.no-hover-btn-5:hover,
+.no-hover-btn-6:hover {
     font-weight: 1000;
     color: var(--color-menu-red);
 }
@@ -847,7 +854,8 @@ footer {
 #idBtn-2.activate-btn-2,
 #idBtn-3.activate-btn-3,
 #idBtn-4.activate-btn-4,
-#idBtn-5.activate-btn-5 {
+#idBtn-5.activate-btn-5,
+#idBtn-6.activate-btn-6 {
     color: var(--color-menu-red);
     font-weight: 1000;
 }
@@ -858,7 +866,8 @@ footer {
 #building .activate-btn-2,
 #audiovisual .activate-btn-3,
 #marketing .activate-btn-4,
-#estudio .activate-btn-5 {
+#estudio .activate-btn-5,
+#tvshow .activate-btn-6 {
     transform: translateX(-300%);
     transition: all 1s cubic-bezier(0.5, 0.1, 0.25, 1) !important;
 }
@@ -867,7 +876,8 @@ aside#t_eventos,
 aside#t_building,
 aside#t_audiovisual,
 aside#t_marketing,
-aside#t_estudio {
+aside#t_estudio,
+aside#t_tvshow {
     padding-top: 70px;
     width: 50%;
     height: 100%;
@@ -883,7 +893,8 @@ aside#t_estudio {
 #t_building::-webkit-scrollbar,
 #t_audiovisual::-webkit-scrollbar,
 #t_marketing::-webkit-scrollbar,
-#t_estudio::-webkit-scrollbar {
+#t_estudio::-webkit-scrollbar,
+#t_tvshow::-webkit-scrollbar {
     display: none;
 }
 

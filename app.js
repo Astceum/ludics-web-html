@@ -22,6 +22,7 @@ let idBuilding = document.querySelector("#t_building");
 let idAudiovisual = document.querySelector("#t_audiovisual");
 let idMarketing = document.querySelector("#t_marketing");
 let idEstudio = document.querySelector("#t_estudio");
+let idTvShow = document.querySelector("#t_tvshow");
 
 let containerHome = document.querySelector(".container-home");
 let classMenuHome = document.querySelector(".menu-home")
@@ -310,7 +311,7 @@ function btnActivate(numBtn) {
 
   btnServiceActivo = !btnServiceActivo;
 
-  let btnNumber = [1, 2, 3, 4, 5]
+  let btnNumber = [1, 2, 3, 4, 5, 6]
   btnNumber.map(element => {
       if (numBtn == element) {
         let idBtn = document.querySelector(`#idBtn-${element}`)
@@ -323,6 +324,7 @@ function btnActivate(numBtn) {
         idAudiovisual.classList.toggle(`activate-btn-${element}`);
         idMarketing.classList.toggle(`activate-btn-${element}`);
         idEstudio.classList.toggle(`activate-btn-${element}`);
+        idTvShow.classList.toggle(`activate-btn-${element}`);
         idBtn.classList.toggle(`activate-btn-${element}`);
         
         btnServiceMenu.forEach(function(btn) {
@@ -345,6 +347,7 @@ function btnActivate(numBtn) {
         idAudiovisual.classList.remove(`activate-btn-${element}`);
         idMarketing.classList.remove(`activate-btn-${element}`);
         idEstudio.classList.remove(`activate-btn-${element}`);
+        idTvShow.classList.remove(`activate-btn-${element}`);
         idBtn.classList.remove(`activate-btn-${element}`);
 
         btnServiceMenu.forEach(function(btn) {
