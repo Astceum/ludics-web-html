@@ -15,10 +15,13 @@ let videosServicesYt = {
     videoService12: "https://www.youtube.com/embed/dJuU-jg2NX8?si=CVWxmWULGIIcROlk",
     videoService13: "https://www.youtube.com/embed/ERNlatffw6E?si=FTPS-jz2JpqDFSVG",
     videoService14: "https://www.youtube.com/embed/E78Qvs1UGDE?si=22ahVHGydVwA5s4Z",
-    videoService15: "https://www.youtube.com/embed/lWE_DNzZpSo?si=NjNGk40_TJKtI0d_"
+    videoService15: "https://www.youtube.com/embed/lWE_DNzZpSo?si=NjNGk40_TJKtI0d_",
+    videoService16: "https://www.youtube.com/embed/YYQTkaIEWSE?si=okenRawLwTArf-JE",
+    videoService17: "https://www.youtube.com/embed/BD2HoHkZzE8?si=LzOy4J5o6cp-9EZA",
+    videoService18: "https://www.youtube.com/embed/BD2HoHkZzE8?si=LzOy4J5o6cp-9EZA"
 }
 
-let idNumService = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+let idNumService = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 idNumService.map(e => {
 
     let modalBtnService = document.getElementById(`event${e}`);
