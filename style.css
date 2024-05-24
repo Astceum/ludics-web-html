@@ -540,6 +540,10 @@ aside#servicios::-webkit-scrollbar {
     color: var(--color-menu-hover);
 }
 
+#t_servicios h2 {
+    display: none;
+}
+
 /* LUDICS */
 
 
@@ -1135,7 +1139,8 @@ aside#and-more::-webkit-scrollbar {
     margin: 25px 0;
     overflow: hidden;
     
-  }
+}
+
 .swiper3 {
     width: 100%;
     height: 35%;
@@ -1298,21 +1303,40 @@ aside#and-more::-webkit-scrollbar {
     #left.toggleService,
     #left.toggleLudics,
     #left.toggleAndMore {
-    width: 0;
-    height: 35vh;
-    margin-top: 65vh;
-    transform: translateX(-300%);
-    transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1);
+        width: 0;
+        left: -25%;
+        height: 35vh;
+        margin-top: 65vh;
+        transform: translateX(-300%);
+        transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1);
     }
 
-    .container-home.toggleService {
-        transform: translateX(-200%);
+    .container-home.toggleService,
+    .container-home.toggleLudics,
+    .container-home.toggleAndMore {
+        transform: translateX(-300%);
         transition: transform 6s cubic-bezier(.5, -0.005, 0.2, 1) !important;
     }
+    
+
+    .line.toggleLudics,
+    .line.toggleAndMore {
+        display: none;
+    }
+
+    .menu-home.activate-btn-1,
+    .menu-home.activate-btn-2,
+    .menu-home.activate-btn-3,
+    .menu-home.activate-btn-4,
+    .menu-home.activate-btn-5,
+    .menu-home.activate-btn-6 {
+        transform: translateX(-400%);
+        transition: transform 2s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+}
 
     .menu,
     .menu-servicios.menu {
-    margin-left: 0px;
+        margin-left: 0px;
     }
 
     .menu-home {
@@ -1327,7 +1351,16 @@ aside#and-more::-webkit-scrollbar {
         margin-bottom: 0px;
         font-size: 8vw;
         line-height: 10vw;
-        
+    }
+
+    .menu-home.toggleLudics,
+    .menu-home.toggleAndMore {
+        width: 120%;
+        margin-bottom: 0px;
+        left: 0;
+        font-size: 8vw;
+        line-height: 10vw;
+        transition: none ;   
     }
 
     #t_servicios .toggleService { 
@@ -1340,9 +1373,29 @@ aside#and-more::-webkit-scrollbar {
     #servicios.activate-btn-4,
     #servicios.activate-btn-5,
     #servicios.activate-btn-6 {
-        transform: translateX(-504%);
-        transition: all .5s cubic-bezier(.5, -0.005, 0.2, 1) !important;
+        transform: translateX(-404%);
+        transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
     }
+
+    .menu-servicios {
+        padding-top: 100px;
+        line-height: 10vw;
+    }
+    
+    .menu-servicios .menu {
+        margin-bottom: 7% !important;
+    }
+
+    #t_servicios h2 {
+        display: block;
+        font-family: var(--font-family-menu);
+        font-size: 9vw;
+        line-height: 9vw;
+        font-weight: 1000;
+        color: var(--color-menu-white);
+        margin: 0 0 5% 3%;
+    }
+    
 
     /* BTN-EVENTOS */
 
@@ -1362,11 +1415,9 @@ aside#and-more::-webkit-scrollbar {
     aside#t_marketing,
     aside#t_estudio,
     aside#t_tvshow {
-        padding-top: 50px;
+        padding-top: 65px;
         margin-left: 10px;
         width: 100%;
-        height: 100%;
-        
     }
 
     .text-description-service {
@@ -1382,6 +1433,7 @@ aside#and-more::-webkit-scrollbar {
 
 
     /* LUDICS */
+
 
     #ludics-squad {
         width: 60%;
@@ -1403,33 +1455,95 @@ aside#and-more::-webkit-scrollbar {
         font-family: var(--font-family-regular);
     }
 
+    .swiper1 {
+        left: 0;
+    }
+
+    .swiper1 .swiper-slide {
+        width: 200px; 
+        height: 300px;
+    }
+
+    .swiper1 .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+
+    .swiper2 {
+        height: 500px;
+    }
+
     #experiencia-title{
-        height: 50%;
+        height: 85%; /* CAMBIO */
     }
     
     #experiencia-title img {
         width: 97%;
     }
 
-    .banner-img-video {
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 130px);
-        overflow: hidden;
+    #container-resume {
+        display: none;
+    }
+
+    .slider-portafolio {
+        position: relative;
+        height: 100%;
+        padding: 60px 20px 20px 20px;
+        margin: 0;
+    }
+
+    #hablemos-title{
+        padding-top: 20%; /* CAMBIO */
+    }
+
+    #hablemos-title img {
+        width: 80%;
+    }
+    
+    #contact-ludics img {
+        width: 35px;
+    }
+    
+    #contact-ludics li {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 1rem 1rem;
+    }
+    
+    #contact-ludics h2 { /* CAMBIO */
+        margin-left: 10px; 
+        font-size: 9pt;
     }
 
-    .banner-img-video video {
-        position: absolute;
-        
-        top: 0;
-        left: 0;
+    #title-company-and-more img {
+        padding-top: 6%;
+        display: block;
         width: 100%;
-        height: 100%;
+        height: 109%;
         object-fit: cover;
+        user-select: none;
     }
-      
+
+    #company-and-more {
+        margin-top: 77px;
+    }
+    
+    .company {
+        height: 70px;
+        width: 37%;
+    }
+
+
+
+   
      
 }
+
+ @media screen and (min-width: 430px) {
+        .logo-video-mobile {
+          display: none; /* Ocultar el video para pantallas anchas */
+        }
+      }
