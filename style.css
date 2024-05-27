@@ -454,7 +454,7 @@ aside {
     position: fixed;
     top: 0;
 
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 
@@ -1392,6 +1392,7 @@ aside#and-more::-webkit-scrollbar {
         font-size: 8vw;
         line-height: 10vw;
         font-weight: 100;
+        bottom: 33px;
         transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
     }
 
