@@ -33,6 +33,7 @@ let lineMenuH222 = document.querySelector(".line-h222");
 let lineRed = document.querySelector(".redLudics");
 let lineRed2 = document.querySelector(".redAndMore");
 let idLeft = document.querySelector("#left");
+let btnBackContainer = document.querySelector(".btnBack-container");
 
 let menuService = document.getElementById("miElemento1")
 let menuService2 = document.getElementById("miElemento2")
@@ -43,6 +44,20 @@ let ludicsActivo = false;
 let andMoreActivo = false;
 let logoActivo = false;
 let btnServiceActivo = false;
+let btnBackActivo = false;
+
+document.addEventListener('DOMContentLoaded', function() {
+  function actualizarAltura() {
+      const altura = window.innerHeight;
+      return altura
+  }
+  
+  // Mostrar la altura inicial
+  actualizarAltura();
+  
+  // Actualizar la altura en el cambio de tamaño de la ventana
+  window.addEventListener('resize', actualizarAltura);
+});
 
 
 document.addEventListener('mousemove', moveCursor);
@@ -90,6 +105,38 @@ play.forEach((play) => {
   })
 })
 
+function btnBack() {
+
+  if (!btnBackActivo) {
+
+    if (ludicsActivo) {
+      toggleLudics();
+    }
+    if (andMoreActivo) {
+      toggleAndMore();
+    }
+    if (servicioActivo) {
+      toggleService();
+    }
+  } else {
+        btnActivate()
+
+  }
+
+  // if (!btnBackActivo) {
+
+  //   if (servicioActivo) {
+  //     toggleService();
+  //   }
+  // } else {
+  //       btnActivate()
+
+  // }
+
+
+  
+}
+
 
 function toggleLogo() {
 
@@ -125,6 +172,7 @@ function toggleService(){
     logoI.classList.toggle('toggleService');
     logoC.classList.toggle('toggleService');
     logoS.classList.toggle('toggleService');
+    btnBackContainer.classList.toggle('toggleService');
 
     
     
@@ -198,6 +246,7 @@ function toggleLudics(){
     logoI.classList.toggle('toggleLudics');
     logoC.classList.toggle('toggleLudics');
     logoS.classList.toggle('toggleLudics');
+    btnBackContainer.classList.toggle('toggleLudics');
 
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-ludics")) {
@@ -235,6 +284,7 @@ function toggleAndMore(){
     logoI.classList.toggle('toggleAndMore');
     logoC.classList.toggle('toggleAndMore');
     logoS.classList.toggle('toggleAndMore');
+    btnBackContainer.classList.toggle('toggleAndMore');
     
     menuHome.forEach(function(btn) {
       if (btn.classList.contains("no-hover-and-more")) {
