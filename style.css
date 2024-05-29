@@ -1533,6 +1533,13 @@ aside#and-more::-webkit-scrollbar {
         width: 97%;
     }
 
+    .modal {
+        height: 40%;
+    }
+
+
+
+    
     #container-resume {
         display: none;
     }
