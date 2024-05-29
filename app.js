@@ -46,19 +46,6 @@ let logoActivo = false;
 let btnServiceActivo = false;
 let btnBackActivo = false;
 
-document.addEventListener('DOMContentLoaded', function() {
-  function actualizarAltura() {
-      const altura = window.innerHeight;
-      return altura
-  }
-  
-  // Mostrar la altura inicial
-  actualizarAltura();
-  
-  // Actualizar la altura en el cambio de tamaño de la ventana
-  window.addEventListener('resize', actualizarAltura);
-});
-
 
 document.addEventListener('mousemove', moveCursor);
 
@@ -105,43 +92,26 @@ play.forEach((play) => {
   })
 })
 
+
 function btnBack() {
-
-  if (!btnBackActivo) {
-
-    if (ludicsActivo) {
-      toggleLudics();
-    }
-    if (andMoreActivo) {
-      toggleAndMore();
-    }
-    if (servicioActivo) {
-      toggleService();
-    }
-  } else {
-        btnActivate()
-
+  if (btnServiceActivo) {
+    btnActivate();
+    btnServiceActivo = false;
+  } else if (servicioActivo ) {
+    toggleService();
+    servicioActivo = false;
+  } else if (ludicsActivo) {
+    toggleLudics();
+  } else if (andMoreActivo) {
+    toggleAndMore();
   }
-
-  // if (!btnBackActivo) {
-
-  //   if (servicioActivo) {
-  //     toggleService();
-  //   }
-  // } else {
-  //       btnActivate()
-
-  // }
-
-
-  
 }
+
 
 
 function toggleLogo() {
 
   if (!logoActivo) {
-    
     if (ludicsActivo) {
       toggleLudics();
     }
@@ -162,6 +132,8 @@ let animacionActiva = false;
 
 function toggleService(){
   servicioActivo = !servicioActivo;
+  btnServiceActivo = false;
+  
     idService.classList.toggle('toggleService');
     idLeft.classList.toggle('toggleService');
     classMenuHome.classList.toggle('toggleService');
@@ -209,7 +181,6 @@ function toggleService(){
 
 
       if (servicioActivo) {
-        console.log("servicio", servicioActivo);
         if (ludicsActivo) {
           console.log("ludics",ludicsActivo);
           toggleLudics();
@@ -219,7 +190,6 @@ function toggleService(){
           toggleAndMore();
         }
       } else {
-        console.log("servicio", servicioActivo);
         console.log("servicioactivo", btnServiceActivo)
         // Si servicioActivo está desactivado, desactiva btnActivate si está activo
         
@@ -355,8 +325,6 @@ function btnActivate(numBtn) {
       direction: "reverse",
       delay: (el, i) => { return i * 300 }
     });
-  
-  
   
 
   btnServiceActivo = !btnServiceActivo;
@@ -544,5 +512,4 @@ function aplicarEfecto(imagenes, scrollTop, clientHeight, transformacion) {
     }
   }
 }
-
 
