@@ -107,7 +107,24 @@ function btnBack() {
   }
 }
 
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Controla el número de retrocesos
+//   let backCount = 0;
 
+//   // Agrega una entrada inicial al historial
+//   window.history.pushState({ page: 'initial' }, "", "");
+
+//   // Maneja el evento de retroceso del botón del navegador
+//   window.addEventListener('popstate', (event) => {
+//       if (backCount < 4) { // Controla hasta 4 retrocesos personalizados
+//           btnBack();
+//           backCount++;
+//       } else {
+//           // Deja que el navegador realice el retroceso normalmente
+//           window.history.go(-1);
+//       }
+//   });
+// });
 
 function toggleLogo() {
 
@@ -377,7 +394,6 @@ function btnActivate(numBtn) {
       
   })
 
-  
 
 }
 
