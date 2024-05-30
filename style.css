@@ -502,13 +502,36 @@ aside#servicios::-webkit-scrollbar {
     transform-origin: left;
     font-size: 6vw;
     line-height: 7vw;
-    background-color: #000000;
+    /* background-color: #000000; */
     transition: font-size 1s, line-height 1s, transform 1s;
 }
 
 .menu-servicios .menu {
     margin-bottom: 3% !important;
 }
+
+/* #video-estrellas-container {
+    display : none;
+} */
+
+#video-estrellas-container {
+    position: relative;
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #video-estrellas {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
 
 
 
@@ -617,6 +640,10 @@ aside#ludics::-webkit-scrollbar {
     object-fit: cover;
     top: 0;
 
+}
+
+#ludics-team-mobile {
+    display: none;
 }
 
 .img-squad {
@@ -813,6 +840,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .banner-img-video video {
@@ -925,7 +953,7 @@ aside#t_tvshow {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     opacity: 1;
     z-index: 10;
 }
@@ -1263,7 +1291,7 @@ aside#and-more::-webkit-scrollbar {
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 679px) {
     .inner-cursor {
         background-color: transparent !important;
     }
@@ -1306,10 +1334,10 @@ aside#and-more::-webkit-scrollbar {
     
     .btnBack {
         position: relative;
-        width: 5rem;
-        height: 5rem;
-        background-color: #34070a90;
+        width: 4rem;
+        height: 4rem;
         border: 2.3px solid #686868;
+        background-color: #8c8c8c22;
         border-radius: 50%;
         cursor: pointer;
         top: 50%;
@@ -1329,6 +1357,15 @@ aside#and-more::-webkit-scrollbar {
         color: #fff;
         border-bottom: 1vw solid #fff;
     }
+
+    .btnBack i {
+        position: absolute;
+        font-size: 2rem;
+        color: #fff;
+        top: 50%;
+        left: 47%;
+        transform: translate(-50%, -50%);
+    }
     
     
 
@@ -1337,6 +1374,10 @@ aside#and-more::-webkit-scrollbar {
     }
     .social-media {
         padding: 0 20px 0 20px;
+    }
+
+    .banner {
+        height: 50px;
     }
 
     .container-home {
@@ -1386,7 +1427,7 @@ aside#and-more::-webkit-scrollbar {
 
     .menu-home {
         font-size: 8vw;
-        line-height: 10vw;
+        line-height: 12vw;
         font-weight: 100;
         bottom: 3vh; /* 33px */ /* TODO */
         transition: all 1s cubic-bezier(.5, -0.005, 0.2, 1) !important;
@@ -1425,7 +1466,7 @@ aside#and-more::-webkit-scrollbar {
 
     .menu-servicios {
         padding-top: 100px;
-        line-height: 10vw;
+        line-height: 9vw;
     }
     
     .menu-servicios .menu {
@@ -1439,9 +1480,36 @@ aside#and-more::-webkit-scrollbar {
         line-height: 9vw;
         font-weight: 1000;
         color: var(--color-menu-white);
-        margin: 0 0 5% 3%;
+        margin: 0 0 9% 3%;
     }
     
+
+    /* #video-estrellas-container {
+        display : flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+    #video-estrellas-container {
+       position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #video-estrellas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
 
     /* BTN-EVENTOS */
 
@@ -1461,7 +1529,7 @@ aside#and-more::-webkit-scrollbar {
     aside#t_marketing,
     aside#t_estudio,
     aside#t_tvshow {
-        padding-top: 65px;
+        padding-top: 80px;
         margin-left: 10px;
         width: 100%;
     }
@@ -1490,7 +1558,17 @@ aside#and-more::-webkit-scrollbar {
         left: 22%;
     }
 
+    #gradient-red {
+        position: absolute;
+        right: -29%;
+        width: 180%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+    }
+
     #description-ludics {
+        padding-top: 6%;
         height: 40%;
         display: flex;
         justify-content: center;
@@ -1501,8 +1579,26 @@ aside#and-more::-webkit-scrollbar {
         text-align: center;
         font-size: 100%;
         font-weight: 400;
-        padding: 0 3%;
+        padding: 0 6%;
         font-family: var(--font-family-regular);
+    }
+
+    .banner-img-video video {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 112%;
+        object-fit: cover;
+    }
+
+    .slider-team {
+        position: relative;
+        height: 42%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
     }
 
     .swiper1 {
@@ -1532,6 +1628,10 @@ aside#and-more::-webkit-scrollbar {
     #experiencia-title img {
         width: 97%;
     }
+    
+    .modal {
+        height: 40%;
+    }
 
     .modal {
         height: 40%;
@@ -1546,7 +1646,7 @@ aside#and-more::-webkit-scrollbar {
 
     .slider-portafolio {
         position: relative;
-        height: 100%;
+        height: 110%;
         padding: 60px 20px 20px 20px;
         margin: 0;
     }
@@ -1593,14 +1693,37 @@ aside#and-more::-webkit-scrollbar {
         width: 37%;
     }
 
+    #ludics-team {
+        display: none;
+    }
+    #ludics-team-mobile {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
 
+    }
 
    
      
 }
 
- @media screen and (min-width: 430px) {
+ @media screen and (min-width: 679px) {
         .logo-video-mobile {
           display: none; /* Ocultar el video para pantallas anchas */
         }
       }
+
+      
+/* Estilos para orientación horizontal (landscape) */
+/* @media screen and (orientation: landscape) {
+    .banner {
+        display: none;
+    }
+    .container {
+        display: none;
+    }
+    
+} */
