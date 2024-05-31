@@ -1266,7 +1266,7 @@ aside#and-more::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    background-image: url('./img/ymas/company/background-company.png');
+    background-image: url('https://res.cloudinary.com/deiavzaxs/image/upload/v1717139738/background-company-1_wt9k7o.jpg');
     background-size: cover;
     background-position: bottom;
 }
