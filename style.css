@@ -1556,6 +1556,7 @@ aside#and-more::-webkit-scrollbar {
     #ludics-squad {
         width: 60%;
         left: 22%;
+        top: 37%;
     }
 
     #gradient-red {
@@ -1568,8 +1569,8 @@ aside#and-more::-webkit-scrollbar {
     }
 
     #description-ludics {
-        padding-top: 6%;
-        height: 40%;
+        padding: 0 0 6% 0;
+        height: 14%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1622,7 +1623,7 @@ aside#and-more::-webkit-scrollbar {
     }
 
     #experiencia-title{
-        height: 85%; /* TODO */
+        height: 40%; /* TODO */
     }
     
     #experiencia-title img {
@@ -1662,17 +1663,25 @@ aside#and-more::-webkit-scrollbar {
     #contact-ludics img {
         width: 35px;
     }
+
+    #contact-ludics ul {
+        width: 100%;
+        color: #fff;
+        display: grid;
+        justify-content: none;
+        align-items: none;
+    }
     
     #contact-ludics li {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 1rem 1rem;
+        margin: -1rem 1rem;
     }
     
     #contact-ludics h2 { /* TODO */
-        margin-left: 10px; 
-        font-size: 9pt;
+        margin-left: 20px; 
+        font-size: 12pt;
     }
 
     #title-company-and-more img {
