@@ -1638,6 +1638,10 @@ aside#and-more::-webkit-scrollbar {
         height: 40%;
     }
 
+    .text-slider {
+        font-size: 1.5em;
+    }
+
 
 
     
