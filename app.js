@@ -145,13 +145,6 @@ function toggleLogo() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var video = document.getElementById('video-estrellas');
-  video.muted = true;
-  video.play().catch(function(error) {
-      console.log('Autoplay was prevented:', error);
-  });
-});
 
 let animacionActiva = false;
 
